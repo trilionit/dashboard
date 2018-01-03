@@ -13,39 +13,48 @@
 @import './partials/_variables';
 /*@import './partials/_mixins';*/
 
-html{
+html {
     height: 100%;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
 }
-ul{
+
+ul {
     margin: 0;
     padding: 0;
 }
-li{
+
+li {
     list-style: none;
 }
-.clearfix{
+
+i {
+    margin-right: 10px;
+}
+
+.clearfix {
     clear: all;
 }
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: $MainSize;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
+    font-size: $DefaultTextSize;
     color: $DefaultTextColor;
     background: $BodyBgColor;
     line-height: 1.5em;
     text-align: left;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
 }
 
-header{
+header {
   	position: fixed;
   	top: 0;
   	left: 0;
@@ -54,7 +63,10 @@ header{
   	background: $PrimaryBgColor;
   	color: setTextColor($PrimaryBgColor);
 }
-
+section {
+    position: relative;
+    width: 100%;
+}
 .container{
     width: 80%;
     margin: 0 auto;

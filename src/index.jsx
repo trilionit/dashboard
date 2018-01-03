@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 //import { Router, Route, IndexRoute, browserHistory } from "react-router";
-import HeaderComponent from './components/HeaderComponent/index.jsx';
+import Layout from './components/index.jsx';
 const root = document.getElementById('root');
-ReactDOM.render(<HeaderComponent />, root);
+ReactDOM.render(<Layout />, root);
