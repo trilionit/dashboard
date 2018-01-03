@@ -1,19 +1,21 @@
 //variables
 
-	$bodyBgColor: #E4E9F0;
-	$primaryBgColor: #4a148c;
-	$secondaryBgColor: #012346;
+	$BodyBgColor: #E4E9F0;
+	$PrimaryBgColor: #311b92;
+	$SecondaryBgColor: #FFF;
 	$DefaultTextColor:  #666;
+	$NavTextColor: #A9A9A9;
+	$NavHoverColor: #00AFF0;
 
 	$MainSize: 14px;
-	$secondarySize: 12px;
-	$smallSize: 10px;
+	$SecondarySize: 12px;
+	$SmallSize: 10px;
 
 
 //functions
 
-@function setTextColor ($primaryBgColor){
-	@if(lightness($primaryBgColor) > 50) {
+@function setTextColor ($PrimaryBgColor){
+	@if(lightness($PrimaryBgColor) > 50) {
 		@return  #000;
 	}@else{
 		@return #FFF;

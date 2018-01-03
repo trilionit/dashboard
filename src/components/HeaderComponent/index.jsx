@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 
-import TopRightNav from './TopRightNav.jsx';
 import LogoContainer from './LogoContainer.jsx';
+import NavComponent from './NavComponent.jsx';
+import TopRightNav from './TopRightNav.jsx';
+
 
 require('../../scss/layout.scss');
 require('../../scss/HeaderComponent.scss');
@@ -12,6 +14,7 @@ class HeaderComponent extends Component{
 			<header>
 				<LogoContainer />
 				<TopRightNav />
+				<NavComponent />
 			</header>
 
 		)
