@@ -1,0 +1,82 @@
+/*
+  Date: August 2017
+  Description: Dashboard Styles
+  Version: 1.0
+  Design By: Prince
+  Author URL: http://designbyprince.com
+*/
+/* ===========================
+   ======= Body style ======== 
+   =========================== */
+/*@import './partials/_mixins';*/
+html {
+  height: 100%; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+.clearfix {
+  clear: all; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #666;
+  background: #E4E9F0;
+  line-height: 1.5em;
+  text-align: left; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #4a148c;
+  color: #FFF; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+.logo-container {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  max-width: 50%;
+  padding: 18px 0 0 0; }
+  .logo-container a {
+    color: #FFF; }
+    .logo-container a span {
+      display: inline-block;
+      margin-left: 10px;
+      font-weight: 500;
+      font-size: 16px;
+      text-transform: uppercase; }
+
+.top-right-nav-container {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  max-width: 50%;
+  font-size: 10px;
+  text-align: left;
+  padding: 16px 0 0 0; }
+  .top-right-nav-container a {
+    transition: all linear 0.15s;
+    color: #FFF; }
+  .top-right-nav-container ul {
+    margin: 0;
+    padding: 0; }
+    .top-right-nav-container ul li {
+      position: relative;
+      right: 0;
+      display: inline-block;
+      font-size: 10px;
+      padding: 0 5px; }

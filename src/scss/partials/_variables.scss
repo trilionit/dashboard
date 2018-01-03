@@ -1,0 +1,21 @@
+//variables
+
+	$bodyBgColor: #E4E9F0;
+	$primaryBgColor: #4a148c;
+	$secondaryBgColor: #012346;
+	$DefaultTextColor:  #666;
+
+	$MainSize: 14px;
+	$secondarySize: 12px;
+	$smallSize: 10px;
+
+
+//functions
+
+@function setTextColor ($primaryBgColor){
+	@if(lightness($primaryBgColor) > 50) {
+		@return  #000;
+	}@else{
+		@return #FFF;
+	}
+}

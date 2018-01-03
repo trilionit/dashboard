@@ -1,0 +1,48 @@
+@import './partials/_variables';
+
+.logo-container{
+	position: absolute;
+	top: 0;
+	left: 10%; 
+	max-width: 50%;
+	padding: 18px 0 0 0;
+
+	a {
+		color: setTextColor($primaryBgColor);
+
+		span {
+			display: inline-block;
+			margin-left: 10px;
+			font-weight: 500;
+    		font-size: 16px;
+    		text-transform: uppercase;
+		}
+	}
+}
+
+.top-right-nav-container{
+    position: absolute;
+    top: 0;
+    right: 10%;
+    max-width: 50%;
+    font-size: 10px;
+    text-align: left;
+    padding: 16px 0 0 0;
+
+    a {
+	    transition:all linear 0.15s;
+	    color: setTextColor($primaryBgColor);
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li{
+			position: relative;
+			right: 0;
+		    display: inline-block;
+		    font-size: $smallSize;
+		    padding: 0 5px;
+		}
+	}
+}

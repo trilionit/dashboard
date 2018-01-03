@@ -1,0 +1,54 @@
+/*
+  Date: August 2017
+  Description: Dashboard Styles
+  Version: 1.0
+  Design By: Prince
+  Author URL: http://designbyprince.com
+*/
+
+/* ===========================
+   ======= Body style ======== 
+   =========================== */
+
+@import './partials/_variables';
+/*@import './partials/_mixins';*/
+
+html{
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.clearfix{
+    clear: all;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: $MainSize;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    color: $DefaultTextColor;
+    background: $bodyBgColor;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+header{
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 60px;
+  	background: $primaryBgColor;
+  	color: setTextColor($primaryBgColor);
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
