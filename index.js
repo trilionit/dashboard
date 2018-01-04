@@ -1,10 +1,4 @@
 'use strict'
-/* 
-	Fallback server for supporting browserHistory
-	in your React application. 
-*/
-
-
 //instatiate path and express
 const express = require('express')
 const path = require('path')

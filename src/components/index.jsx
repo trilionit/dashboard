@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 
+import FooterComponent from './FooterComponent/index.jsx';
 import HeaderComponent from './HeaderComponent/index.jsx';
-import InsightsComponent  from './InsightsComponent/index.jsx';
 
-require('../scss/HeaderComponent.scss');
-require('../scss/insightsComponent.scss');
 require('../scss/layout.scss');
+require('../scss/headerComponent.scss');
+require('../scss/insightsComponent.scss');
+require('../scss/footerComponent.scss');
+require('../scss/pagesComponent.scss');
 
 
 class Layout extends Component{
@@ -13,7 +15,8 @@ class Layout extends Component{
 		return(
 			<div>
 				<HeaderComponent />
-				<InsightsComponent />
+					{this.props.children}			
+				<FooterComponent />
 			</div>		
 		)
 	}

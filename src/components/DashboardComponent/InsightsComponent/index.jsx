@@ -17,8 +17,8 @@ class InsightsComponent extends Component{
 								<h2>Total Visits</h2>
 								<h3>1200</h3>
 							</div>
-							<div class="quick-last-update-container">
-								<i class="fa fa-cog fa-1x"></i> 
+							<div className="quick-last-update-container">
+								<i className="fa fa-cog fa-1x"></i> 
 								Since yesterday
 							</div>
 						</div>
@@ -31,8 +31,8 @@ class InsightsComponent extends Component{
 								<h2>Total Page Views</h2>
 								<h3>5,025,720</h3>
 							</div>
-							<div class="quick-last-update-container">
-								<i class="fa fa-cog fa-1x"></i> 
+							<div className="quick-last-update-container">
+								<i className="fa fa-cog fa-1x"></i> 
 								Since yesterday
 							</div>
 						</div>
@@ -45,8 +45,8 @@ class InsightsComponent extends Component{
 								<h2>Total Unique Visitors</h2>
 								<h3>5622</h3>
 							</div>
-							<div class="quick-last-update-container">
-								<i class="fa fa-cog fa-1x"></i> 
+							<div className="quick-last-update-container">
+								<i className="fa fa-cog fa-1x"></i> 
 								Since yesterday
 							</div>
 						</div>
