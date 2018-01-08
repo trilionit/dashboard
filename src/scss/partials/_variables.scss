@@ -10,9 +10,12 @@
 	$NavHoverColor: #00AFF0;
 
 	$DefaultTextSize: 14px;
-	$HeaderTextSize: 18px;
 	$SecondaryTextSize: 12px;
 	$SmallTextSize: 10px;
+
+	$HeaderTextSizeExtraLarge: 35px;
+	$HeaderTextSizeLarge: 28px;
+	$HeaderTextSize: 18px;
 
 	$HeaderBgColor: $NavHoverColor;
 
@@ -20,7 +23,11 @@
 	$LeftPosition: 5%;
 	$RightPosition: 5%;
 
+	$PositionCenter: 10% auto;
 
+//margins and padding
+	$PaddingAll: 10px;
+	$MarginAll: 10px;
 //functions
 
 @function setTextColor ($PrimaryBgColor){
