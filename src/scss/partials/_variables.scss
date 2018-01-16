@@ -1,33 +1,55 @@
-//variables
+//colors
 
-	$BodyBgColor: #E4E9F0;
-	$PrimaryBgColor: #311b92;
+	$BodyBgColor: #CCC;
+	$PrimaryBgColor: #012346;
 	$SecondaryBgColor: #FFF;
+	$HeaderBgColor: #01C7C6;
 
 	$DefaultTextColor:  #666;
 	$HeaderTextColor: #1B1A1A;
-	$NavTextColor: #A9A9A9;
+	$NavTextColor: #3F3F3F;
 	$NavHoverColor: #00AFF0;
 
+	$DarkerTextColor: $NavTextColor;
+	$lighterTextColor: #898989;
+
+	$DangerColor: #FF5D48;
+	$DangerDarkerColor: #b71c1c;
+	$DangerLightColor: #e53935;
+
+//text sizes
 	$DefaultTextSize: 14px;
 	$SecondaryTextSize: 12px;
 	$SmallTextSize: 10px;
 
 	$HeaderTextSizeExtraLarge: 35px;
-	$HeaderTextSizeLarge: 28px;
+	$HeaderTextSizeLarge: 28x;
 	$HeaderTextSize: 18px;
 
-	$HeaderBgColor: $NavHoverColor;
-
 //positioning
-	$LeftPosition: 5%;
-	$RightPosition: 5%;
+	$TopPosition: 0;
+	$BottomPosition: 0;
+	$LeftPosition: 0;
+	$RightPosition: 0;
 
 	$PositionCenter: 10% auto;
 
 //margins and padding
 	$PaddingAll: 10px;
+	$PaddingTopBottom: 10px 0;
+	$PaddingLeftRight: 0 10px;
+	$PaddingTop: 0;
+	$PaddingRight: 30px;
+	$PaddingBottom: 0; 
+	$PaddingLeft: 30px;
+
 	$MarginAll: 10px;
+	$MarginTopBottom: 10px 0;
+	$MarginLeftRight: 0 10px;
+	$MarginTop: 0;
+	$MarginRight: 0;
+	$MarginBottom: 0;
+	$MarginLeft: 0;
 //functions
 
 @function setTextColor ($PrimaryBgColor){
@@ -35,5 +57,12 @@
 		@return  #000;
 	}@else{
 		@return #FFF;
+	}
+}
+@function setBorderColor($BorderColor){
+	@if(lightness($BorderColor) < 50){
+		@return #263238;
+	}@else {
+		@return #fafafa;
 	}
 }

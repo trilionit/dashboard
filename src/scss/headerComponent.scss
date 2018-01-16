@@ -2,17 +2,17 @@
 
 .logo-container{
 	position: absolute;
-	top: 0;
-	left: 5%; 
+	top: $TopPosition;
+	left: $LeftPosition; 
 	max-width: 50%;
-	padding: 18px 0 0 10px;
+	padding: 18px 0 0 $PaddingLeft;
 
 	a {
 		color: setTextColor($PrimaryBgColor);
 
 		span {
 			display: inline-block;
-			margin-left: 10px;
+			margin-left: $MarginLeft;
 			font-weight: 500;
     		font-size: 16px;
     		text-transform: uppercase;
@@ -25,9 +25,8 @@
     top: 0;
     right: $RightPosition;
     max-width: 50%;
-    font-size: 10px;
-    text-align: left;
-    padding: 16px 0 0 0;
+    font-size: $SmallTextSize;
+    padding: 16px $PaddingRight 0 0;
 
     a {
 	    transition:all linear 0.15s;
@@ -39,7 +38,7 @@
 			right: 0;
 		    display: inline-block;
 		    font-size: $SmallTextSize;
-		    padding: 0 5px;
+		    padding: 0;
 
 			&:last-child{
 				margin-right: 0;
@@ -71,7 +70,7 @@ nav{
     	color: $NavTextColor;
 
     	&:first-child{
-    		padding-left: 10px;
+    		padding-left: $PaddingLeft;
     	}
 
     	a{
@@ -86,10 +85,9 @@ nav{
 .nav-right {
 	position: absolute;
 	top: 18px;
-	right: 10%;
+	right: $RightPosition;
     max-width: 20%;
     margin: 0;
-
     li {
     	display: inline;
     	padding: 0 15px;
@@ -97,7 +95,7 @@ nav{
 
     	&:last-child{
     		margin-right: 0;
-    		padding-right: 0;
+    		padding-right: $PaddingRight;
     	}
 
     	a{

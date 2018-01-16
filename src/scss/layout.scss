@@ -114,10 +114,10 @@ section {
             display: block;
             padding: 0;
             margin: 0;
-            color: $NavTextColor;
+            color: $lighterTextColor;
 
             a{
-                color: $NavTextColor;
+                color: $lighterTextColor;
 
                 &:hover, &:active{
                     color: $NavHoverColor;
@@ -126,26 +126,16 @@ section {
         }
     }  
 }
-.page-header {
-    color: $HeaderTextColor;
-    font-weight: 300;
-    h1{
-        font-size: $HeaderTextSizeLarge;
-        font-weight: 300; 
-    }
-    h2{
-        font-size: $HeaderTextSize;
-        font-weight: 400;
-    }
-    span{
-        font-size: $HeaderTextSize;
-        font-weight: 200;
-        line-height: 1.6em;
-    }
+
+.text-left{
+    text-align: left;
 }
-.pages-container{
-    position: absolute;
-    right: $RightPosition;
-    width:72%;
-    padding: 30px 0 0 20px;
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.secondary-background{
+    background-color: $SecondaryBgColor;
 }

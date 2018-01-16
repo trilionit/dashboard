@@ -11,7 +11,7 @@ footer{
 .footer-left{
 	position: absolute;
 	max-width: 60%;
-	left: 5%;
+	left: $LeftPosition;
 
 	li{
 		display: inline;
@@ -30,5 +30,6 @@ footer{
 .footer-right{
 	position: absolute;
 	max-width: 40%;
-	right: 5%;
+	right: $RightPosition;
+	padding-right: $PaddingRight;
 }

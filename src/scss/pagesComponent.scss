@@ -1,0 +1,24 @@
+@import './partials/_variables';
+.pages-container{
+    position: absolute;
+    left: 18%;
+    width:82%;
+    padding: 30px $PaddingRight 0 $PaddingLeft;
+}
+.page-header {
+    color: $HeaderTextColor;
+    font-weight: 300;
+    h1{
+        font-size: $HeaderTextSizeLarge;
+        font-weight: 300; 
+    }
+    h2{
+        font-size: $HeaderTextSize;
+        font-weight: 400;
+    }
+    span{
+        font-size: $HeaderTextSize;
+        font-weight: 200;
+        line-height: 1.6em;
+    }
+}

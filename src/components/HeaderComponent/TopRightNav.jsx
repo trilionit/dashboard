@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class TopRightNav extends Component{
 	render(){
 		return(
-			<div className="top-right-nav-container">
+			<div className="top-right-nav-container text-left">
 				<ul className="clearfix">
 					<li>
 						<a href=""><i className="fa fa-user fa-2x"></i><span></span></a>						

@@ -1,7 +1,59 @@
+@import './partials/_extend';
+@import './partials/_mixins';
 @import './partials/_variables';
 
 .panel-container{
 	width: 60%;
 	margin: $PositionCenter;
 	padding: $PaddingAll;
+}
+
+.panel-header{
+	width: 100%;
+	padding: $PaddingAll;
+
+	@extend %shared-titles
+}
+
+.panel-body{
+	width: 100%;
+	margin: $MarginTopBottom;
+
+	@extend %shared-titles;
+
+	span{
+		float: left;
+		width: 100%;
+		margin: $MarginTopBottom;
+	}
+}
+
+button{
+	padding: 10px 20px;
+	cursor: pointer;
+	@include border-radius(2px);
+}
+
+.primary{
+	transition: .5s;
+    color: setTextColor($PrimaryBgColor);
+    background-color: $PrimaryBgColor;
+    border: 1px solid setBorderColor($PrimaryBgColor);
+
+    &:hover{
+    	background-color: $HeaderBgColor;
+    	color: setTextColor($HeaderBgColor);
+    	border: 1px solid #bbdefb;
+    }
+}
+.danger{
+	color: setTextColor($DangerColor);
+	background-color: $DangerColor;
+	border: 1px solid setBorderColor($DangerColor);
+
+	&:hover{
+		background-color: $DangerLightColor;
+		color: #012346;
+    	border: 1px solid #FFD4D4;
+	}
 }
