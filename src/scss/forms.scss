@@ -1,0 +1,69 @@
+@import './partials/_variables';
+@import './partials/_extend';
+.form-main-container{
+    float: left;
+    width: 100%;
+}
+.form-header{
+    float: left;
+    width:100%;
+    background:#F5F5F5;
+    padding: $Padding20;
+}
+.form-header h3{
+    font-weight: 500;
+    font-size: $HeaderTextSize;
+    color: $DarkerTextColor;
+    margin:0;
+    padding:0;
+}
+.form-container{
+    float: left;
+    width: 100%;
+    padding: $Padding20;
+}
+.input-element{
+   @extend %form-positioning; 
+}
+.input-label{
+    color: #F5F5F5;
+}
+
+label::before{
+    content: '';
+    transform: translateY(-20px);
+}
+.message-element{
+    @extend %form-positioning;
+}
+
+.input-text {
+    @extend %shared-form-props;
+}
+
+
+.message-element textarea{
+    @extend %shared-form-props;
+    height: 200px;
+}
+
+.btn {
+    width: auto;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border:none;
+}
+.btn-primary{
+    color: setTextColor($PrimaryBgColor);
+    background-color: $BtnPrimary;
+}
+.btn-primary:hover{
+    background-color: $BtnPrimaryHover;
+}
+.btn-secondary{
+    color: setTextColor($PrimaryBgColor);
+    background-color: $BtnSecondary;
+}
+.btn-secondary:hover{
+    background-color: $BtnSecondaryHover;
+}

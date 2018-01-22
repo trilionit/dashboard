@@ -30,6 +30,11 @@ li {
 i {
   margin-right: 10px; }
 
+button {
+  border-radius: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none; }
+
 .clearfix {
   clear: all; }
 
@@ -114,6 +119,69 @@ section {
 
 .secondary-background {
   background-color: #FFF; }
+.input-element, .message-element {
+  color: #888;
+  margin-top: 10px;
+  width: 100%; }
+
+.input-text, .message-element textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid #DCDCDC; }
+
+.form-main-container {
+  float: left;
+  width: 100%; }
+
+.form-header {
+  float: left;
+  width: 100%;
+  background: #F5F5F5;
+  padding: 20px; }
+
+.form-header h3 {
+  font-weight: 500;
+  font-size: 18px;
+  color: #3F3F3F;
+  margin: 0;
+  padding: 0; }
+
+.form-container {
+  float: left;
+  width: 100%;
+  padding: 20px; }
+
+.input-label {
+  color: #F5F5F5; }
+
+label::before {
+  content: '';
+  transform: translateY(-20px); }
+
+.message-element textarea {
+  height: 200px; }
+
+.btn {
+  width: auto;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none; }
+
+.btn-primary {
+  color: #FFF;
+  background-color: #0277bd; }
+
+.btn-primary:hover {
+  background-color: #1565c0; }
+
+.btn-secondary {
+  color: #FFF;
+  background-color: #e65100; }
+
+.btn-secondary:hover {
+  background-color: #ef6c00; }
 .panel-header h1, .panel-body h1 {
   font-size: 35px; }
 
@@ -267,6 +335,38 @@ nav {
     font-size: 18px;
     font-weight: 200;
     line-height: 1.6em; }
+
+.settings {
+  float: left;
+  width: 100%; }
+
+.header {
+  display: block;
+  background: #F5F5F5;
+  padding: 20px;
+  color: #3F3F3F;
+  font-weight: 300; }
+  .header h3 {
+    font-size: 15px;
+    font-weight: 400; }
+
+.settings-list {
+  float: left;
+  width: 100%;
+  margin: 0 0 10px 0; }
+  .settings-list li {
+    display: block;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #DCDCDC; }
+    .settings-list li span {
+      position: relative;
+      right: 0; }
+    .settings-list li ul li {
+      display: block;
+      border: none; }
+      .settings-list li ul li a {
+        color: #01C7C6; }
 /* Grids */
 .grid-container {
   display: flex;

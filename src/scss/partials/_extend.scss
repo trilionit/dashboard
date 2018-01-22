@@ -15,3 +15,19 @@
 		margin-bottom: 10px;
 	}	
 }
+
+%form-positioning{
+	color: #888;
+    margin-top: 10px; 
+    width: 100%;
+}
+
+%shared-form-props{
+	width: 100%;
+    padding: 10px 0;
+    font-size: $DefaultTextSize;
+    border:none;
+    border-bottom: 1px solid $BorderColorDarkGrey;
+
+}
+
