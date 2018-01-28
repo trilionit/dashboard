@@ -1,52 +1,35 @@
 import React, {Component} from 'react';
+import AddNewPage from './addForm.jsx';
+class PageListComponent extends Component{
 
-class AddNewPage extends Component{
+	constructor(){
+		super()
+		this.state={
+			addPages:true
+		}
+	}
+
 	render(){
-		return(
-		<div className="grid-container">
-			<div className="grid-70 secondary-background">
-				<div className="panel-container">
-					<div className="panel-header text-center">
-						<h1><i className="fa fa-file-text-o fa-4x"></i></h1>
-					</div>
-					<div className="panel-body text-center">
-						<h2>Manage Your Pages</h2>
-						<h3>You have not created any pages yet</h3>
-						
-					</div>
+		if(this.state.addPages==false){
+			return(
+			<div className="panel-container">
+				<div className="panel-header text-center">
+					<h1><i className="fa fa-file-text-o fa-4x"></i></h1>
+				</div>
+				<div className="panel-body text-center">
+					<h2>Manage Your Pages</h2>
+					<h3>You have not created any pages yet</h3>
+					
 				</div>
 			</div>
-			<div className="grid-30 secondary-background">
-				<div className="settings">
-					<div className="header">
-						<h3>Page Settings</h3>
-					</div>
-					<div className="grid-1">
-						<form>
-							<div className="form-container">
-								<div className="input-element">
-									<label htmlFor="title" className="form-label">Page Name</label>
-									<input type="text" name="title" className="input-text" />
-								</div>
-
-								<div className="message-element">
-									<label htmlFor="title">Page Description (Optional)</label>
-									<textarea></textarea>
-								</div>
-
-								<div className="input-element">
-									<button className="btn btn-primary">Submit</button>
-								</div>
-
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>					
-		)
+			)
+		}else{
+			return(
+				<AddNewPage />
+			)
+		}
 	}
 }
 
-export default AddNewPage;
+export default PageListComponent;
 

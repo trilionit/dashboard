@@ -1,4 +1,6 @@
 @import './partials/_variables';
+@import './partials/_extend';
+
 .pages-container{
     position: absolute;
     left: 18%;
@@ -27,12 +29,7 @@
     width: 100%;
 }
 .header{
-    display: block;
-    background:#F5F5F5;
-    padding: $Padding20;
-    color: $DarkerTextColor;
-    font-weight: 300;
-
+    @extend %header-props;
     h3{
         font-size: 15px;
         font-weight: 400;

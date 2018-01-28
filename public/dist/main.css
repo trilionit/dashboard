@@ -8,6 +8,13 @@
 /* ===========================
    ======= Body style ======== 
    =========================== */
+.table-header {
+  display: block;
+  background: #F5F5F5;
+  padding: 20px;
+  color: #3F3F3F;
+  font-weight: 300; }
+
 /*@import './partials/_mixins';*/
 html {
   height: 100%; }
@@ -119,6 +126,35 @@ section {
 
 .secondary-background {
   background-color: #FFF; }
+
+.cs-table {
+  width: 100%; }
+  .cs-table table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0; }
+  .cs-table tr {
+    width: 100%; }
+  .cs-table th {
+    width: auto;
+    padding: 0 20px;
+    margin: 0 0 20px 0;
+    font-weight: 400; }
+  .cs-table th:first-child, .cs-table th:last-child {
+    width: 10%; }
+  .cs-table td {
+    width: auto;
+    font-weight: 300;
+    color: #333;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-bottom: 1px solid #E4E9F0; }
+    .cs-table td a {
+      color: #00AFF0; }
+    .cs-table td span {
+      margin: 0 10px;
+      font-weight: 100; }
 .input-element, .message-element {
   color: #888;
   margin-top: 10px;
@@ -316,6 +352,13 @@ nav {
       color: #3F3F3F; }
       .nav-right li a:hover, .nav-right li a:active {
         color: #00AFF0; }
+.header {
+  display: block;
+  background: #F5F5F5;
+  padding: 20px;
+  color: #3F3F3F;
+  font-weight: 300; }
+
 .pages-container {
   position: absolute;
   left: 18%;
@@ -340,15 +383,9 @@ nav {
   float: left;
   width: 100%; }
 
-.header {
-  display: block;
-  background: #F5F5F5;
-  padding: 20px;
-  color: #3F3F3F;
-  font-weight: 300; }
-  .header h3 {
-    font-size: 15px;
-    font-weight: 400; }
+.header h3 {
+  font-size: 15px;
+  font-weight: 400; }
 
 .settings-list {
   float: left;

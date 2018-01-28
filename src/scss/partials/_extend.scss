@@ -30,4 +30,10 @@
     border-bottom: 1px solid $BorderColorDarkGrey;
 
 }
-
+%header-props{
+	display: block;
+    background: $SecondaryHeaderBgColor;
+    padding: $Padding20;
+    color: $DarkerTextColor;
+    font-weight: 300;
+}
