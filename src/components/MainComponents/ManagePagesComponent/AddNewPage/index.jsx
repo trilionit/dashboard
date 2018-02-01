@@ -1,11 +1,16 @@
 import React, {Component} from 'react';
+import {Switch, Route} from 'react-router-dom';
+
 import AddNewPage from './addForm.jsx';
+import EditPage from '../EditPage/index.jsx';
+
+
 class PageListComponent extends Component{
 
 	constructor(){
 		super()
 		this.state={
-			addPages:true
+			addPages:true,
 		}
 	}
 
@@ -25,7 +30,10 @@ class PageListComponent extends Component{
 			)
 		}else{
 			return(
-				<AddNewPage />
+				<Switch>
+					<Route  exact path="/pages" component={AddNewPage} />
+					<Route  exact path="/pages/editpage" component={EditPage} />
+				</Switch>
 			)
 		}
 	}

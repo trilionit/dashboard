@@ -17,17 +17,18 @@ class SideBarComponent extends Component {
 						</ul>
 					</span>
 					<span>
-						<h3>Site Articles</h3>
+						<h3>Site Posts</h3>
 						<ul>
-							<li><Link to="/pages/new-article"><i className="fa fa-file-text"></i>Add New Article</Link></li>
-							<li><Link to="/articles"><i className="fa fa-wrench"></i>Manage Articles</Link></li>
+							<li><Link to="/posts/category"><i className="fa fa-file-text"></i>Categories</Link></li>
+							<li><Link to="/posts/new"><i className="fa fa-file-text"></i>Add New Post</Link></li>
+							<li><Link to="/posts"><i className="fa fa-wrench"></i>Manage Posts</Link></li>
 						</ul>
 					</span>
 					<span>
 						<h3>Media</h3>
 						<ul>
-							<li><Link to="/pages/media/new-media"><i className="fa fa-camera"></i>Add Media</Link></li>
-							<li><Link to="/pages/media"><i className="fa fa-wrench"></i>Manage Media</Link></li>
+							<li><Link to="/media/new-media"><i className="fa fa-camera"></i>Add Media</Link></li>
+							<li><Link to="/media"><i className="fa fa-wrench"></i>Manage Media</Link></li>
 						</ul>
 					</span>
 				</div>

@@ -52,7 +52,7 @@ class AddNewPage extends Component{
 								</div>
 
 								<div className="input-element">
-									<button className="btn btn-primary">Submit</button>
+									<button className="btn btn-primary">Add</button>
 								</div>
 
 							</div>

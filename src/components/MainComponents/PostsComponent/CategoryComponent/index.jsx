@@ -1,24 +1,20 @@
 import React, {Component} from 'react';
 
-import PageListComponent from './AddNewPage/index.jsx';
-import PageSettings from './PageSettings.jsx';
-
-
-class ManagePages extends Component{
+class CategoryComponent extends Component{
 	
 	render(){
 		
 		return(
 			<div className="grid-container">
 				<div className="grid-70 secondary-background">
-					<PageListComponent />
+					Categories
 				</div>
 				<div className="grid-30 secondary-background">
-					<PageSettings />
+					Page Settings
 				</div>
 			</div>
 		)
 	}
 }
 
-export default ManagePages;
+export default CategoryComponent;

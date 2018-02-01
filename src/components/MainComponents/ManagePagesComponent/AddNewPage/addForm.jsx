@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
+
 class AddNewPage extends Component{
 	
 	render(){
@@ -10,7 +11,7 @@ class AddNewPage extends Component{
 				<div className="cs-table">
 					<table>
 						<tbody>
-							<tr className="table-header">
+							<tr className="cs-header">
 								<th></th>
 								<th>Page Name</th>
 								<th>Description (optional)</th>								
@@ -18,24 +19,44 @@ class AddNewPage extends Component{
 								<th>Status</th>
 								<th></th>
 							</tr>
-
 							<tr>
 								<td>
 									<span>
-										<i className="fa fa-plus" id="plus-1"></i>
+										<i className="fa fa-file-o"></i>
 									</span>
 								</td>
-								<td>Home</td>
+								<td>
+									Home
+								</td>
 								<td>Landing Page</td>
 								<td>Aug 9, 2017</td>
 								<td>Active</td>
 								<td className="icon-color">
-									<Link to="/editpage">
+									<Link to="/pages/editpage">
 										<span><i className="fa fa-pencil"></i></span>
 									</Link>
-									<span><i className="fa fa-trash"></i></span>
-								</td>				
-							</tr>							
+									<span id="delete"><i className="fa fa-trash"></i></span>
+								</td> 
+							</tr>
+							<tr>
+								<td>
+									<span>
+										<i className="fa fa-file-o"></i>
+									</span>
+								</td>
+								<td>
+									About
+								</td>
+								<td>About Us</td>
+								<td>Aug 9, 2017</td>
+								<td>Active</td>
+								<td className="icon-color">
+									<Link to="/pages/editpage">
+										<span><i className="fa fa-pencil"></i></span>
+									</Link>
+									<span id="delete"><i className="fa fa-trash"></i></span>
+								</td> 
+							</tr>					
 						</tbody>
 					</table>
 				</div>

@@ -35,7 +35,7 @@ button{
 }
 
 .primary{
-	transition: .5s;
+	transition: 500ms;
     color: setTextColor($PrimaryBgColor);
     background-color: $PrimaryBgColor;
     border: 1px solid setBorderColor($PrimaryBgColor);
@@ -56,4 +56,16 @@ button{
 		color: #012346;
     	border: 1px solid #FFD4D4;
 	}
+}
+.success{
+	transition: 500ms;
+    color: setTextColor($HeaderBgColor);
+    background-color: #1de9b6;
+    border: 1px solid #01C7C6;
+
+    &:hover{
+    	background-color: #006064;
+    	color: setTextColor(#006064);
+    	border: 1px solid #00838f;
+    }
 }

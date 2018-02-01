@@ -8,8 +8,7 @@
 /* ===========================
    ======= Body style ======== 
    =========================== */
-.table-header {
-  display: block;
+.cs-header {
   background: #F5F5F5;
   padding: 20px;
   color: #3F3F3F;
@@ -134,27 +133,24 @@ section {
     border-collapse: collapse;
     padding: 0;
     margin: 0; }
-  .cs-table tr {
-    width: 100%; }
   .cs-table th {
-    width: auto;
-    padding: 0 20px;
+    padding: 20px;
     margin: 0 0 20px 0;
     font-weight: 400; }
-  .cs-table th:first-child, .cs-table th:last-child {
-    width: 10%; }
   .cs-table td {
-    width: auto;
+    margin: 10px;
     font-weight: 300;
-    color: #333;
     cursor: pointer;
     padding: 10px 15px;
     border-bottom: 1px solid #E4E9F0; }
-    .cs-table td a {
-      color: #00AFF0; }
-    .cs-table td span {
-      margin: 0 10px;
-      font-weight: 100; }
+
+.icon-color a {
+  color: #666; }
+  .icon-color a:hover {
+    color: #1B1A1A; }
+
+.icon-color:hover {
+  color: #1B1A1A; }
 .input-element, .message-element {
   color: #888;
   margin-top: 10px;
@@ -256,7 +252,7 @@ button {
   border-radius: 2px; }
 
 .primary {
-  transition: .5s;
+  transition: 500ms;
   color: #FFF;
   background-color: #012346;
   border: 1px solid #263238; }
@@ -273,6 +269,16 @@ button {
     background-color: #e53935;
     color: #012346;
     border: 1px solid #FFD4D4; }
+
+.success {
+  transition: 500ms;
+  color: #FFF;
+  background-color: #1de9b6;
+  border: 1px solid #01C7C6; }
+  .success:hover {
+    background-color: #006064;
+    color: #FFF;
+    border: 1px solid #00838f; }
 .logo-container {
   position: absolute;
   top: 0;
@@ -353,7 +359,6 @@ nav {
       .nav-right li a:hover, .nav-right li a:active {
         color: #00AFF0; }
 .header {
-  display: block;
   background: #F5F5F5;
   padding: 20px;
   color: #3F3F3F;
@@ -383,9 +388,11 @@ nav {
   float: left;
   width: 100%; }
 
-.header h3 {
-  font-size: 15px;
-  font-weight: 400; }
+.header {
+  display: block; }
+  .header h3 {
+    font-size: 15px;
+    font-weight: 400; }
 
 .settings-list {
   float: left;

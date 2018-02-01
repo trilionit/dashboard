@@ -144,47 +144,47 @@ section {
 .secondary-background{
     background-color: $SecondaryBgColor;
 }
-.table-header{
+.cs-header{
     @extend %header-props;
 }
 .cs-table{
     width: 100%;
 
     table{
-        width:100%;
+        width: 100%;
         border-collapse: collapse;
         padding: 0;
         margin:0;
     }
-    tr{
-        width: 100%;
-    }
-    th {
-        width: auto;
-        padding:0 20px;
+
+    th{
+        padding: 20px;
         margin:0 0 20px 0;
         font-weight: 400;
-        }
-    th:first-child, th:last-child{
-        width: 10%;
     }
 
-    td {
-        width: auto;
+    td{
+        margin: $MarginAll;
         font-weight: 300;
-        color:#333;
         cursor: pointer;
         padding:10px 15px;
-        border-bottom:1px solid #E4E9F0; 
-
-        a{
-            color:#00AFF0;
-        }
-
-        span{
-            margin:0 10px;
-            font-weight: 100;
-        }
+        border-bottom:1px solid #E4E9F0;
     }
         
+}
+
+.icon-color{
+    a{
+        color: $DefaultTextColor;
+
+        &:hover{
+            color: $HeaderTextColor;
+        }
+    }
+
+    &:hover{
+        color: $HeaderTextColor;
+    }
+
+   
 }

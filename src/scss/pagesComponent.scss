@@ -29,6 +29,7 @@
     width: 100%;
 }
 .header{
+    display: block;
     @extend %header-props;
     h3{
         font-size: 15px;

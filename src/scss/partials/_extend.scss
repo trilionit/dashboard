@@ -16,13 +16,13 @@
 	}	
 }
 
-%form-positioning{
+%form-positioning {
 	color: #888;
     margin-top: 10px; 
     width: 100%;
 }
 
-%shared-form-props{
+%shared-form-props {
 	width: 100%;
     padding: 10px 0;
     font-size: $DefaultTextSize;
@@ -30,8 +30,7 @@
     border-bottom: 1px solid $BorderColorDarkGrey;
 
 }
-%header-props{
-	display: block;
+%header-props {
     background: $SecondaryHeaderBgColor;
     padding: $Padding20;
     color: $DarkerTextColor;
