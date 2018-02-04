@@ -1,4 +1,9 @@
 /* Grids */
+.grid-no-space{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 .grid-container{
     display: flex;
     flex-direction: row;
@@ -27,7 +32,12 @@
 .grid-center{
 	width: 60%;
 }
-
+.grid-10{
+    width: 9.5%;
+}
+.grid-15{
+    width: 15%;
+}
 .grid-20{
     width: 19.5%;
 }
@@ -49,4 +59,10 @@
 
 .grid-80{
     width: 79.5%;
+}
+.grid-85{
+    width: 85%;
+}
+.grid-90{
+    width: 89.5%;
 }

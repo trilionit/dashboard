@@ -1,9 +1,9 @@
 //colors
 
-	$BodyBgColor: #CCC;
+	$BodyBgColor: #F4F4F4;
 	$PrimaryBgColor: #012346;
 	$SecondaryBgColor: #FFF;
-	$HeaderBgColor: #01C7C6;
+	$HeaderBgColor: #052963;
 
 	$SecondaryHeaderBgColor: #F5F5F5;
 	$DefaultTextColor:  #666;
@@ -11,7 +11,7 @@
 	$NavTextColor: #3F3F3F;
 	$NavHoverColor: #00AFF0;
 
-	$DarkerTextColor: $NavTextColor;
+	$DarkerTextColor: #07175C;
 	$lighterTextColor: #898989;
 
 	$DangerColor: #FF5D48;
@@ -52,6 +52,8 @@
 	$PaddingBottom: 0; 
 	$PaddingLeft: 30px;
 	$Padding20: 20px;
+	$Padding20-10: 20px 10px;
+	$Padding10-20: 10px 20px;
 	
 	$MarginAll: 10px;
 	$MarginTopBottom: 10px 0;

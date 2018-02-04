@@ -11,11 +11,11 @@ module.exports = {
     	publicPath: 'public/dist'
     },
 
-    devServer: {
-        historyApiFallback: true,
-        contentBase: './',
-        hot: true
-    },
+    // devServer: {
+    //     historyApiFallback: true,
+    //     contentBase: './',
+    //     hot: true
+    // },
     
     module:{
     	rules:[
@@ -49,6 +49,6 @@ module.exports = {
      	new ExtractTextPlugin('main.css'),
      	new UglifyJsPlugin({
 	    	test: /\.js($|\?)/i
-	  		}),
+	  		})
     ]
 }
