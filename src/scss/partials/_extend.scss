@@ -1,2 +1,16 @@
 @import '/_variables';
 
+%panel-styles {
+	width: 100%;
+	padding: $PaddingAll;
+	font-weight: 300;
+}
+%panel-header {
+	font-size: $DefaultTextSize;
+	color: $DarkerTextColor;
+}
+%panel-with-icons-styles {
+	width: 100%;
+	padding: $PaddingTopBottom;
+	font-weight: 300;	
+}

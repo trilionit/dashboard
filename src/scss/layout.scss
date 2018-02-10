@@ -45,6 +45,10 @@ button{
     -webkit-border-radius:none;
     -moz-border-radius:none;
 }
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
 .clearfix {
     clear: all;
 }
@@ -59,7 +63,40 @@ body {
     -moz-osx-font-smoothing: grayscale; 
 }
 
-.main-container{
+.main-container {
     position: relative;
     top:100%;
+}
+
+.container { 
+    width: 80%;
+    margin: 4% auto;
+}
+
+.page-header {
+    width: 100%;
+    margin: 2% 0;
+    padding: 0;
+
+    h3{
+        font-size: $HeaderTextSize;
+        font-weight: 100;
+        line-height: 1.3em;
+    }
+}
+.display-icons {
+    float: left;
+    color:#A9A9A9;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
+}
+.create-space{
+    width: 100%;
+    margin: $MarginTopBottom;
 }

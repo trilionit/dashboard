@@ -1,0 +1,83 @@
+@import './partials/_variables';
+@import './partials/_extend';
+.panel-container {
+	width:100%;
+	-webkit-box-shadow: 0px 1px 5px -5px rgba(50, 50, 50, 0.55);
+    -moz-box-shadow: 0px 1px 5px -5px rgba(50, 50, 50, 0.55);
+    box-shadow: 0px 1px 5px -5px rgba(50, 50, 50, 0.55);
+}
+.panel-header {
+	background: $SecondaryHeaderBgColor;
+	@extend %panel-header;	
+	@extend %panel-styles;
+}
+.panel-header-secondary {
+	background: $SecondaryBgColor;
+	border-bottom: 1px solid $BorderColorDarkGrey;
+	@extend %panel-header;	
+	@extend %panel-styles;
+}
+.panel-body {
+	font-size: $SecondaryTextSize;
+	background: $SecondaryBgColor;
+	@extend %panel-styles;
+}
+
+.panel-body-secondary {
+	font-size: $SecondaryTextSize;
+	background: $SecondaryBgColor;
+	@extend %panel-styles;
+	border-bottom: 1px solid $BorderColorDarkGrey;
+}
+
+.panel-footer {
+	@extend %panel-styles;
+	background: $SecondaryBgColor;
+	color: #BCBCBC;
+	font-size: $SecondaryTextSize;
+	border-top: 1px solid $BorderColorDarkGrey;
+}
+
+.panel-container-with-icons {
+	float: left;
+	width:100%;
+	background: $SecondaryBgColor;
+	padding:$PaddingAll;
+	-webkit-box-shadow: 0px 1px 5px -5px rgba(50, 50, 50, 0.55);
+    -moz-box-shadow: 0px 1px 5px -5px rgba(50, 50, 50, 0.55);
+    box-shadow: 0px 1px 5px -5px rgba(50, 50, 50, 0.55);
+}
+
+.panel-with-icons {
+	float: left;
+	width: 100%;
+	font-weight: 300;
+	background: $SecondaryBgColor; 
+}
+
+.panel-body-header {
+	float: right;
+	padding:0 0 10px 0;
+		h2{
+			font-size: 14px;
+			font-weight: 500;
+		}
+
+		h3{
+			font-size: 18px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+}
+
+.panel-with-icons-footer {
+	float: left;
+	@extend %panel-with-icons-styles;
+	padding-bottom: 0;
+	background: $SecondaryBgColor;
+	color: #BCBCBC;
+	font-size: $SecondaryTextSize;
+	border-top: 1px solid $BorderColorDarkGrey;
+}
+
+

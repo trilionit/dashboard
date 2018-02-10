@@ -8,22 +8,26 @@ class SideBarComponent extends Component{
 			<div className="grid-15">
 				<div className="side-bar">
 					<div className="side-bar-header">
-						<h3><i className="fa fa-file-text"></i> Manage Pages</h3>
+						<h3><i className="fa fa-file-text"></i> Dasboard UIs</h3>
 					</div>
 					<div className="side-nav-bar">
 						<span>
 							<h3>Site Pages</h3>
 							<ul>
-								<li><Link to="/pages/add"><i className="fa fa-file-text-o"></i>Add New Page</Link></li>
-								<li><Link to="/pages"><i className="fa fa-wrench"></i>Manage Pages</Link></li>
+								<li><Link to="/login"><i className="fa fa-wrench"></i>Login/Sign Up</Link></li>
+								<li><Link to="/dashboard"><i className="fa fa-file-text-o"></i>Dashboard Home</Link></li>
+								<li><Link to="/pages"><i className="fa fa-wrench"></i>Inner Pages</Link></li>
+								<li><Link to="/insights"><i className="fa fa-wrench"></i>Insights</Link></li>
 							</ul>
 						</span>
 						<span>
-							<h3>Site Posts</h3>
+							<h3>CSS Essentials</h3>
 							<ul>
-								<li><Link to="/posts/category"><i className="fa fa-file-text"></i>Categories</Link></li>
-								<li><Link to="/posts/new"><i className="fa fa-file-text"></i>Add New Post</Link></li>
-								<li><Link to="/posts"><i className="fa fa-wrench"></i>Manage Posts</Link></li>
+								<li><Link to="/grid"><i className="fa fa-file-text"></i>Grid System</Link></li>
+								<li><Link to="/forms"><i className="fa fa-file-text"></i>Forms</Link></li>
+								<li><Link to="/buttons"><i className="fa fa-wrench"></i>Buttons</Link></li>
+								<li><Link to="/panels"><i className="fa fa-wrench"></i>Panels</Link></li>
+
 							</ul>
 						</span>
 						<span>
