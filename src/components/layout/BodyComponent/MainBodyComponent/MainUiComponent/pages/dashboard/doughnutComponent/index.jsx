@@ -30,8 +30,8 @@ constructor(props){
 		return(					
 			<div className="panel-container">
 				<div className="panel-header-secondary">Best Sellers - Doughnut Chart</div>
-				<div className="panel-body">
-					<Doughnut data={this.state.chartData} />
+				<div className="panel-body fixed-height">
+					<Doughnut data={this.state.chartData}  />
 				</div>
 			</div>
 		)

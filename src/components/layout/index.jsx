@@ -6,6 +6,7 @@ require('../../scss/layout.scss');
 require('../../scss/grid.scss');
 require('../../scss/header.scss');
 require('../../scss/sidebar.scss');
+require('../../scss/messages.scss');
 require('../../scss/navbar.scss');
 require('../../scss/panels.scss');
 require('../../scss/footer.scss');

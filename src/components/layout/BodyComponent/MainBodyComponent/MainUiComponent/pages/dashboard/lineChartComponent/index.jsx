@@ -40,7 +40,7 @@ constructor(props){
 		return(					
 			<div className="panel-container">
 				<div className="panel-header-secondary">User Stats - Line Chart</div>
-				<div className="panel-body">
+				<div className="panel-body fixed-height">
 					<Line data={this.state.chartData} />
 				</div>
 			</div>

@@ -38,6 +38,8 @@ li {
 }
 
 i {
+    font-style: normal;
+    font-weight: normal;
     margin-right: 10px;
 }
 button{
@@ -89,6 +91,33 @@ body {
     color:#A9A9A9;
 }
 
+.list-icon {
+    padding: 5px 10px;
+    margin: 0 10px 10px 0;
+    font-weight: bold;
+    border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+}
+
+.blue-bg {
+    color: #FFF;
+    background: #3FC0E4;
+    border: 0px solid #3FC0E4;
+}
+.green-bg {
+    color: #FFF;
+    background: #FF6384;
+    border: 0px solid #FF6384;
+}
+.red-bg {
+    color: #FFF;
+    background: #FFCE56;
+    border: 0px solid #FFCE56;
+
+}
+
+
 .text-align-left {
     text-align: left;
 }
@@ -96,7 +125,12 @@ body {
 .text-align-right {
     text-align: right;
 }
-.create-space{
+.create-space {
     width: 100%;
     margin: $MarginTopBottom;
+}
+
+.fixed-height {
+    height: 320px;
+    overflow: hidden;
 }
