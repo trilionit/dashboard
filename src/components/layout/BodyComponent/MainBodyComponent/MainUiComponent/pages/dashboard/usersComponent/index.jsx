@@ -9,7 +9,7 @@ class UsersComponent extends Component{
 				<div className="panel-body">
 					<div className="message-container">
 						<div className="display-icon">
-							<i class="fa fa-user fa-2x"></i>
+							<i className="fa fa-user fa-2x"></i>
 						</div>
 						<div className="display-message">
 							<h5>Last Seen: 11:20 am</h5>							
@@ -20,7 +20,7 @@ class UsersComponent extends Component{
 
 					<div className="message-container">
 						<div className="display-icon">
-							<i class="fa fa-user fa-2x"></i>
+							<i className="fa fa-user fa-2x"></i>
 						</div>
 						<div className="display-message">
 							<h5>Last Seen: yesterday at 11:20 am</h5>							
@@ -31,7 +31,7 @@ class UsersComponent extends Component{
 
 					<div className="message-container">
 						<div className="display-icon">
-							<i class="fa fa-user fa-2x"></i>
+							<i className="fa fa-user fa-2x"></i>
 						</div>
 						<div className="display-message">
 							<h5>Last Seen: 11:20 am</h5>							

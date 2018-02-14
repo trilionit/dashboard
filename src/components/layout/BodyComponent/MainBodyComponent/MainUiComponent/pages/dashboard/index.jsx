@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 
 import ContentComponent from './contentComponent/index.jsx';
-import InsightsComponent from './insightsComponent/index.jsx';
-import LineChartComponent from './lineChartComponent/index.jsx';
-import DoughnutComponent from './doughnutComponent/index.jsx';
+import InsightsComponent from '../insights/insightsComponent/index.jsx';
+import LineChartComponent from '../insights/lineChartComponent/index.jsx';
+import DoughnutComponent from '../insights/doughnutComponent/index.jsx';
 import PagesComponent from './pagesComponent/index.jsx';
 import UsersComponent from './usersComponent/index.jsx';
 

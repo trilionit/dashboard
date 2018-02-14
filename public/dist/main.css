@@ -218,7 +218,7 @@ header {
 .side-bar {
   left: 0;
   width: 100%;
-  height: 900px; }
+  height: 100%; }
 
 .side-bar-header {
   width: 100%;
@@ -265,45 +265,62 @@ header {
   padding: 15px 0 20px 0;
   border-bottom: 1px solid #F4F4F4; }
 
-.display-message, .display-pages {
-  width: 85%;
+.display-message, .display-pages, .display-container {
   font-size: 12px;
   font-weight: 300;
   color: #ABABAB;
   cursor: pointer; }
 
-.display-message h5, .display-pages h5 {
+.display-message h5, .display-pages h5, .display-container h5 {
   font-weight: 300;
   font-size: 12px;
   color: #A9A9A9; }
 
-.display-message h3, .display-pages h3 {
+.display-message h3, .display-pages h3, .display-container h3 {
   font-weight: 500;
   font-size: 12px;
   padding: 0; }
 
-.display-message h5 {
-  text-align: right;
-  margin: -10px 0 10px auto; }
+.display-message {
+  width: 85%; }
+  .display-message h5 {
+    text-align: right;
+    margin: -10px 0 10px auto; }
+  .display-message h3 {
+    margin: -30px 0 0 0;
+    color: #7B7B7B; }
 
-.display-message h3 {
-  margin: -30px 0 0 0;
-  color: #7B7B7B; }
+.display-pages {
+  width: 85%; }
+  .display-pages h5 {
+    margin: 0; }
+  .display-pages h3 {
+    margin: -5px 0 0 0;
+    color: #444444; }
+  .display-pages span {
+    background: #ABABAB;
+    margin: -30px 0 0 0;
+    padding: 1px 5px;
+    color: #FFF;
+    float: right;
+    text-align: right; }
 
-.display-pages h5 {
-  margin: 0; }
-
-.display-pages h3 {
-  margin: -5px 0 0 0;
-  color: #444444; }
-
-.display-pages span {
-  background: #ABABAB;
-  margin: -30px 0 0 0;
-  padding: 1px 5px;
-  color: #FFF;
-  float: right;
-  text-align: right; }
+.display-container {
+  width: 85%; }
+  .display-container h5 {
+    display: inline;
+    margin: 0 20px; }
+  .display-container h3 {
+    display: inline;
+    margin: -5px 0 0 0;
+    color: #444444; }
+  .display-container span {
+    background: #ABABAB;
+    margin: -30px 0 0 0;
+    padding: 1px 5px;
+    color: #FFF;
+    float: right;
+    text-align: right; }
 nav {
   width: 100%;
   height: 60px;

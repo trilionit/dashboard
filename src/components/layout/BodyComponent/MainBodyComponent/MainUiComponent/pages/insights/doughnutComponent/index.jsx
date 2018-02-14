@@ -31,7 +31,7 @@ constructor(props){
 			<div className="panel-container">
 				<div className="panel-header-secondary">Best Sellers - Doughnut Chart</div>
 				<div className="panel-body fixed-height">
-					<Doughnut data={this.state.chartData}  />
+					<Doughnut data={this.state.chartData} height={230}  />
 				</div>
 			</div>
 		)
