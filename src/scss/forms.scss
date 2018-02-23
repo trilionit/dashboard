@@ -1,6 +1,68 @@
 @import './partials/_variables';
 @import './partials/_extend';
 
+legend {
+	font-size: $HeaderTextSize;
+	padding: $PaddingTopBottom;
+	color: #000;
+}
+
+.input-field {
+	width: 100%;
+	position: relative;
+
+	label {
+		width: 100%;
+		font-size: $SecondaryTextSize;
+		position: absolute;
+		margin: 0 0 20px 0;
+
+	}
 
 
+
+}
+.input {
+	@extend %shared-form-props;
+	border-bottom: 1px solid $BorderColorDarkGrey;
+}
+.text-area {
+	min-height: 60px;
+	border-bottom: 1px solid $BorderColorDarkGrey;
+	@extend %shared-form-props;
+}
+
+.alert-container {
+	display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    background:#FFE4E1;
+    border-radius: 2px; 
+   -moz-border-radius: 2px; 
+   -webkit-border-radius: 2px; 
+    border:1px solid #FFCCCC;
+}
+.alert-error {    
+    color: #B71C1C;
+    font-weight: 500;
+}
+
+.input-error {
+	@extend %shared-form-props;
+    border-bottom:2px solid #E93924;
+    -webkit-box-shadow: 0 6px 2px -6px #E93924;
+    -moz-box-shadow: 0 6px 2px -6px #E93924;
+}
+
+.form-upload-box{
+	min-height: 200px;
+	max-height: 600px;
+	width: 100%;
+	display: block;
+	font-size: 24px;
+	color: #444;
+	border: 1px solid #CCC;
+	margin: 10px;
+}
 

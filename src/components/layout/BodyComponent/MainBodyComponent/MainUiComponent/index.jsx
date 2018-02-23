@@ -9,6 +9,8 @@ import Grid from './pages/grid/index.jsx';
 import InnerPages from './pages/index.jsx';
 import Insights from './pages/insights/index.jsx';
 import Login from './pages/login/index.jsx';
+import Media from './pages/media/index.jsx';
+import Gallery from './pages/Gallery/index.jsx';
 import Panels from './pages/panels/index.jsx';
 
 
@@ -26,6 +28,8 @@ class MainUiComponent extends Component{
 					<Route path="/forms" component={Forms} />
 					<Route path="/buttons" component={Buttons} />
 					<Route path="/panels" component={Panels} />
+					<Route path="/media" component={Media} />
+					<Route path="/gallery" component={Gallery} />
 				</Switch>
 			</div>
 		)

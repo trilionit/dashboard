@@ -51,3 +51,13 @@
     float: right;
     text-align: right;
 }
+
+%shared-form-props{
+	width: 100%;
+	margin: 0 0 20px 0;
+	color: $DefaultTextColor;
+    padding: 30px 0 5px 0;
+    font-weight: 400;
+    outline: none;
+    border:none;
+}

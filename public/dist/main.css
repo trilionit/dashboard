@@ -41,6 +41,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0; }
 
+input, textarea, select, option {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px; }
+
 .clearfix {
   clear: all; }
 
@@ -111,6 +115,11 @@ body {
 .fixed-height {
   height: 320px;
   overflow: hidden; }
+
+.border-thin {
+  border: 1px solid #E1E1E1;
+  padding: 10px;
+  margin: 10px 0; }
 /* Grids */
 .grid-no-space {
   display: flex;
@@ -440,6 +449,112 @@ nav {
   color: #BCBCBC;
   font-size: 12px;
   border-top: 1px solid #DCDCDC; }
+.input, .text-area, .input-error {
+  width: 100%;
+  margin: 0 0 20px 0;
+  color: #666;
+  padding: 30px 0 5px 0;
+  font-weight: 400;
+  outline: none;
+  border: none; }
+
+legend {
+  font-size: 18px;
+  padding: 10px 0;
+  color: #000; }
+
+.input-field {
+  width: 100%;
+  position: relative; }
+  .input-field label {
+    width: 100%;
+    font-size: 12px;
+    position: absolute;
+    margin: 0 0 20px 0; }
+
+.input {
+  border-bottom: 1px solid #DCDCDC; }
+
+.text-area {
+  min-height: 60px;
+  border-bottom: 1px solid #DCDCDC; }
+
+.alert-container {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  background: #FFE4E1;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border: 1px solid #FFCCCC; }
+
+.alert-error {
+  color: #B71C1C;
+  font-weight: 500; }
+
+.input-error {
+  border-bottom: 2px solid #E93924;
+  -webkit-box-shadow: 0 6px 2px -6px #E93924;
+  -moz-box-shadow: 0 6px 2px -6px #E93924; }
+
+.form-upload-box {
+  min-height: 200px;
+  max-height: 600px;
+  width: 100%;
+  display: block;
+  font-size: 24px;
+  color: #444; }
+button {
+  border: none;
+  cursor: pointer; }
+
+.btn-container {
+  display: inline-block;
+  margin: 5px 10px; }
+
+.btn {
+  padding: 8px 20px;
+  margin: 10px auto;
+  font-size: 14px;
+  font-weight: 400; }
+
+.default {
+  color: #FFF;
+  background: #111; }
+
+.primary {
+  color: #FFF;
+  background: #00b0ff; }
+
+.primary:hover {
+  color: #FFF;
+  background: #0091ea; }
+
+.secondary {
+  color: #FFF;
+  background: #e65100; }
+
+.secondary:hover {
+  color: #FFF;
+  background: #ef6c00; }
+
+.danger {
+  color: #FFF;
+  background: #DC3545; }
+
+.danger:hover {
+  color: #FFF;
+  background: #D50000; }
+
+.warning {
+  color: #B71C1C;
+  background: #FFE4E1; }
+
+.warning:hover {
+  color: #B71C1C;
+  background: #e57373; }
 footer {
   width: 100%;
   margin: 5% 0;

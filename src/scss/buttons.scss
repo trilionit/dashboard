@@ -1,0 +1,66 @@
+@import './partials/_variables';
+@import './partials/_extend';
+
+button {
+	border: none;
+	cursor: pointer;
+}
+.btn-container{
+	display: inline-block;
+	margin: 5px 10px;
+}
+.btn {
+	padding: 8px 20px;
+	margin: 10px auto;
+	font-size: $DefaultTextSize;
+	font-weight: 400;
+}
+
+.default {
+	color: setTextColor(#111);
+	background: #111;
+}
+
+.primary {
+	color: setTextColor($BtnPrimary);
+	background: $BtnPrimary;
+}
+
+.primary:hover {
+	color: setTextColor($BtnPrimaryHover);
+	background: $BtnPrimaryHover;
+}
+
+.secondary {
+	color: #FFF;
+	background: $BtnSecondary;
+}
+
+.secondary:hover {
+	color: #FFF;
+	background: $BtnSecondaryHover;
+}
+
+.danger {
+	color: #FFF;
+	background: $BtnDanger;
+}
+
+.danger:hover {
+	color: #FFF;
+	background: $BtnDangerHover;
+}
+
+.warning {
+	color: #B71C1C;
+	background: $BtnWarning;
+}
+
+.warning:hover {
+	color: #B71C1C;
+	background: $BtnWarningHover;
+}
+// .success {
+// 	color: setTextColor(#FFE4E1);
+// 	background: #FFE4E1;
+// }
