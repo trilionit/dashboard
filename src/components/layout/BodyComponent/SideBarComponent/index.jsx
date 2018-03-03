@@ -34,7 +34,7 @@ class SideBarComponent extends Component{
 							<h3>Media</h3>
 							<ul>
 								<li><Link to="/media"><i className="fa fa-camera"></i>Upload</Link></li>
-								<li><Link to="/gallery"><i className="fa fa-file-image-o"></i>Gallery</Link></li>
+								
 							</ul>
 						</span>
 					</div>

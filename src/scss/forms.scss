@@ -56,13 +56,58 @@ legend {
 }
 
 .form-upload-box{
-	min-height: 200px;
-	max-height: 600px;
-	width: 100%;
-	display: block;
-	font-size: 24px;
-	color: #444;
-	border: 1px solid #CCC;
-	margin: 10px;
+	height: 300px;
+	@extend %file-upload-props;
+	line-height: 300px;
+	&:hover{
+		border-color: #000;
+		color: #000;
+	}
+}
+.file-upload-box{
+	height: 150px;
+	line-height: 100px;
+	@extend %file-upload-props;
+}
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
 }
 
+.inputfile + label {
+    max-width: 80%;
+    height: auto;
+    font-size: 14px;
+    /* 20px, 1.25rem */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    /*display: inline-block;*/
+    overflow: hidden;
+    padding: 0.625rem 1.35rem;
+    /* 10px 20px  */
+    color: #f1e5e6;
+    background-color: #d3394c;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+// .inputfile + label i {
+//     width: 1em;
+//     height: 1em;
+//     vertical-align: middle;
+//     fill: currentColor;
+//     margin-top: -0.25em;
+//     /* 4px */
+//     margin-right: 0.25em;
+//     /* 4px */
+// }
