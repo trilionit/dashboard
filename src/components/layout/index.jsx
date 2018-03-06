@@ -10,8 +10,10 @@ require('../../scss/messages.scss');
 require('../../scss/navbar.scss');
 require('../../scss/panels.scss');
 require('../../scss/forms.scss');
+require('../../scss/login.scss');
 require('../../scss/buttons.scss');
 require('../../scss/footer.scss');
+
 class Layout extends Component{
 
 	render(){

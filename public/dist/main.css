@@ -546,6 +546,19 @@ legend {
 .inputfile.has-focus + label {
   outline: 1px dotted #000;
   outline: -webkit-focus-ring-color auto 5px; }
+.login-container {
+  width: 40%;
+  margin: 10% auto;
+  background: #ccc;
+  padding: 29px; }
+
+.login-box {
+  padding: 29px; }
+
+.input-button {
+  width: 100%;
+  margin: 15px 0;
+  display: block; }
 button {
   border: none;
   cursor: pointer; }
@@ -560,41 +573,59 @@ button {
   font-size: 14px;
   font-weight: 400; }
 
+.btn-large {
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 400; }
+
 .default {
   color: #FFF;
-  background: #111; }
+  background: #052963; }
+  .default:hover {
+    color: #FFF;
+    background: #111; }
+
+.facebook-login {
+  color: #FFF;
+  background: #3b5998; }
+  .facebook-login:hover {
+    color: #000;
+    background: #8b9dc3; }
+
+.gmail-login {
+  color: #FFF;
+  background: #d34836; }
+  .gmail-login:hover {
+    color: #000;
+    background: #DF4A32; }
 
 .primary {
   color: #FFF;
   background: #00b0ff; }
-
-.primary:hover {
-  color: #FFF;
-  background: #0091ea; }
+  .primary:hover {
+    color: #FFF;
+    background: #0091ea; }
 
 .secondary {
   color: #FFF;
   background: #e65100; }
-
-.secondary:hover {
-  color: #FFF;
-  background: #ef6c00; }
+  .secondary:hover {
+    color: #FFF;
+    background: #ef6c00; }
 
 .danger {
   color: #FFF;
   background: #DC3545; }
-
-.danger:hover {
-  color: #FFF;
-  background: #D50000; }
+  .danger:hover {
+    color: #FFF;
+    background: #D50000; }
 
 .warning {
   color: #B71C1C;
   background: #FFE4E1; }
-
-.warning:hover {
-  color: #B71C1C;
-  background: #e57373; }
+  .warning:hover {
+    color: #B71C1C;
+    background: #e57373; }
 footer {
   width: 100%;
   margin: 5% 0;

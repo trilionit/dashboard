@@ -16,50 +16,83 @@ button {
 	font-weight: 400;
 }
 
+.btn-large{
+	padding: 20px;
+	font-size: $DefaultTextSize;
+	font-weight: 400;
+}
+
 .default {
-	color: setTextColor(#111);
-	background: #111;
+	color: setTextColor(#052963);
+	background: #052963;
+
+	&:hover {
+		color: #FFF;
+		background: #111;
+	}
+}
+
+.facebook-login{
+	color: setTextColor(#3b5998);
+	background: #3b5998;
+
+	&:hover {
+		color: setTextColor(#8b9dc3);
+		background: #8b9dc3;
+	}
+}
+
+.gmail-login {
+	color: #FFF;
+	background: #d34836;
+
+	&:hover {
+		color: setTextColor(#d34836);
+		background: #DF4A32;
+	}
 }
 
 .primary {
 	color: setTextColor($BtnPrimary);
 	background: $BtnPrimary;
-}
 
-.primary:hover {
-	color: setTextColor($BtnPrimaryHover);
-	background: $BtnPrimaryHover;
+	&:hover{
+		color: setTextColor($BtnPrimaryHover);
+		background: $BtnPrimaryHover;
+	}
 }
 
 .secondary {
 	color: #FFF;
 	background: $BtnSecondary;
-}
 
-.secondary:hover {
-	color: #FFF;
-	background: $BtnSecondaryHover;
+	&:hover{
+		color: #FFF;
+		background: $BtnSecondaryHover;
+	}
 }
 
 .danger {
 	color: #FFF;
 	background: $BtnDanger;
+
+	&:hover {
+		color: #FFF;
+		background: $BtnDangerHover;
+	}
 }
 
-.danger:hover {
-	color: #FFF;
-	background: $BtnDangerHover;
-}
 
 .warning {
 	color: #B71C1C;
 	background: $BtnWarning;
+
+	&:hover {
+		color: #B71C1C;
+		background: $BtnWarningHover;
+	}
 }
 
-.warning:hover {
-	color: #B71C1C;
-	background: $BtnWarningHover;
-}
 // .success {
 // 	color: setTextColor(#FFE4E1);
 // 	background: #FFE4E1;
