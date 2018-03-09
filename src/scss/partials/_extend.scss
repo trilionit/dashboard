@@ -1,38 +1,72 @@
 @import '/_variables';
 
-%shared-titles{
-	h1{
-		font-size: $HeaderTextSizeExtraLarge;
-	}
-	h2{
-		font-size: $HeaderTextSize;
-	}
-	h3{
-		font-size: $DefaultTextSize;
-	}
-	& h1, & h2, & h3 {
-		font-weight: 100;
-		margin-bottom: 10px;
-	}	
-}
-
-%form-positioning {
-	color: #888;
-    margin-top: 10px; 
-    width: 100%;
-}
-
-%shared-form-props {
+%panel-styles {
 	width: 100%;
-    padding: 10px 0;
-    font-size: $DefaultTextSize;
-    border:none;
-    border-bottom: 1px solid $BorderColorDarkGrey;
-
+	padding: $PaddingAll;
+	font-weight: 300;
 }
-%header-props {
-    background: $SecondaryHeaderBgColor;
-    padding: $Padding20;
-    color: $DarkerTextColor;
+%panel-header {
+	font-size: $DefaultTextSize;
+	color: $DarkerTextColor;
+}
+%panel-with-icons-styles {
+	width: 100%;
+	padding: $PaddingTopBottom;
+	font-weight: 300;	
+}
+
+%container-extension {
+	width: 100%;
+	display: flex;
+	margin: $MarginTopBottom;
+	margin-top: 0;
+	padding: 15px 0 20px 0;
+    border-bottom:1px solid #F4F4F4;
+}
+
+%display-extension {
+    font-size: 12px;
     font-weight: 300;
+    color:#ABABAB;
+    cursor: pointer;
+}
+
+%header-extension-h5 {
+	font-weight: 300;
+	font-size: 12px;
+	color: #A9A9A9;
+}
+
+%header-extension-h3 {
+	font-weight: 500;
+	font-size: 12px;
+    padding: 0;
+}
+
+%span-extension {
+	background: #ABABAB;
+    margin:-30px 0 0 0;
+    padding: 1px 5px;
+    color: #FFF;
+    float: right;
+    text-align: right;
+}
+
+%shared-form-props{
+	width: 100%;
+	margin: 0 0 20px 0;
+	color: $DefaultTextColor;
+    padding: 30px 0 5px 0;
+    font-weight: 400;
+    outline: none;
+    border:none;
+}
+
+%file-upload-props {
+	width: 98%;
+	text-align: center;
+	font-size: 24px;
+	color: #CCC;
+	border: 1px dashed #CCC;
+	margin: 10px;
 }

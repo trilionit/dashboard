@@ -1,17 +1,17 @@
 //colors
 
-	$BodyBgColor: #CCC;
+	$BodyBgColor: #F4F4F4;
 	$PrimaryBgColor: #012346;
 	$SecondaryBgColor: #FFF;
-	$HeaderBgColor: #01C7C6;
+	$HeaderBgColor: #052963;
 
-	$SecondaryHeaderBgColor: #F5F5F5;
+	$SecondaryHeaderBgColor: #EAEEF1;
 	$DefaultTextColor:  #666;
 	$HeaderTextColor: #1B1A1A;
 	$NavTextColor: #3F3F3F;
 	$NavHoverColor: #00AFF0;
 
-	$DarkerTextColor: $NavTextColor;
+	$DarkerTextColor: #07175C;
 	$lighterTextColor: #898989;
 
 	$DangerColor: #FF5D48;
@@ -20,11 +20,17 @@
 
 	$BorderColorDarkGrey: #DCDCDC;
 
-	$BtnPrimary: #0277bd;
-	$BtnPrimaryHover: #1565c0;
+	$BtnPrimary: #00b0ff;
+	$BtnPrimaryHover: #0091ea;
 
 	$BtnSecondary: #e65100;
 	$BtnSecondaryHover: #ef6c00;
+
+	$BtnWarning: #FFE4E1;
+	$BtnWarningHover: #e57373;
+
+	$BtnDanger: #DC3545;
+	$BtnDangerHover: #D50000;
 
 //text sizes
 	$DefaultTextSize: 14px;
@@ -52,10 +58,14 @@
 	$PaddingBottom: 0; 
 	$PaddingLeft: 30px;
 	$Padding20: 20px;
+	$Padding20-10: 20px 10px;
+	$Padding10-20: 10px 20px;
 	
 	$MarginAll: 10px;
 	$MarginTopBottom: 10px 0;
 	$MarginLeftRight: 0 10px;
+	$MarginTopOnly: 10px 0 0 0;
+	$MarginBottomOnly: 0 0 10px 0;
 	$MarginTop: 0;
 	$MarginRight: 0;
 	$MarginBottom: 0;

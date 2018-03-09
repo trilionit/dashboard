@@ -8,6 +8,9 @@ const app = express()
 app.use( express.static(path.join(__dirname, 'public')));
 
 //send any route to index.html where the react app is mounted
+app.get('/login', (req,res)=>{
+	res.sendFile(path.join(__dirname,'public/login.html'))
+})
 app.get('*', (req,res)=>{
 	res.sendFile(path.join(__dirname,'public/index.html'))
 })

@@ -1,0 +1,84 @@
+@import './partials/_variables';
+@import './partials/_extend';
+
+.message-container {
+	@extend %container-extension;
+}
+
+.display-message {
+    width: 85%;
+   @extend %display-extension;
+
+    h5 {
+	    @extend %header-extension-h5;
+	    text-align: right;
+	    margin:-10px 0 10px auto;
+    }
+
+    h3 {
+	    @extend %header-extension-h3;
+	    margin:-30px 0 0 0;
+	    color:#7B7B7B;
+    }
+
+}
+
+.manage-pages-container {
+	@extend %container-extension;
+}
+
+.display-pages {
+    width: 85%;
+	@extend %display-extension;
+
+    h5 {
+	    @extend %header-extension-h5;
+	    margin:0;
+    }
+
+    h3 {
+	   @extend %header-extension-h3;
+	   margin: -5px 0 0 0;
+	   color:#444444;
+    }
+
+    span {
+    	background: #ABABAB;
+    	margin:-30px 0 0 0;
+    	padding: 1px 5px;
+    	color: #FFF;
+    	float: right;
+    	text-align: right;
+	}
+
+
+}
+
+.display-container {
+    width: 85%;
+    @extend %display-extension;
+
+    h5 {
+        display: inline;
+        @extend %header-extension-h5;
+        margin:0 20px;
+    }
+
+    h3 {
+        display: inline;
+       @extend %header-extension-h3;
+       margin: -5px 0 0 0;
+       color:#444444;
+    }
+
+    span {
+        background: #ABABAB;
+        margin:-30px 0 0 0;
+        padding: 1px 5px;
+        color: #FFF;
+        float: right;
+        text-align: right;
+    }
+
+
+}

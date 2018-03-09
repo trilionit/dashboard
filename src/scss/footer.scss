@@ -1,0 +1,36 @@
+@import './partials/_variables';
+@import './partials/_extend';
+
+footer{
+	width: 100%;
+	margin: 5% 0;
+	position: relative;
+	font-size: $SecondaryTextSize;
+	bottom: 0;
+	left: 0;
+}
+.footer-left{
+	position: absolute;
+	max-width: 60%;
+	left: $LeftPosition;
+
+	li{
+		display: inline;
+    	padding: 0 10px;
+
+    	a{
+    		color: $PrimaryBgColor;
+
+    		&:hover{
+    			color: $PrimaryBgColor;
+    		}
+    	}
+	}
+
+}
+.footer-right{
+	position: absolute;
+	max-width: 40%;
+	right: $RightPosition;
+	padding-right: $PaddingRight;
+}

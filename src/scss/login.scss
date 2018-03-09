@@ -1,0 +1,17 @@
+@import './partials/_variables';
+@import './partials/_extend';
+
+.login-container{
+	width: 40%;
+	margin: 10% auto;
+	background: #ccc;
+	padding: 29px;
+}
+.login-box{
+	padding: 29px;
+}
+.input-button {
+	width: 100%;
+	margin: 15px 0;
+	display: block;
+}
