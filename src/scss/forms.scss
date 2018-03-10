@@ -4,13 +4,15 @@
 legend {
 	font-size: $HeaderTextSize;
 	padding: $PaddingTopBottom;
+    text-align: center;
+    font-weight: bold;
 	color: #000;
 }
 
 .input-field {
 	width: 100%;
 	position: relative;
-
+    
 	label {
 		width: 100%;
 		font-size: $SecondaryTextSize;
@@ -18,8 +20,6 @@ legend {
 		margin: 0 0 20px 0;
 
 	}
-
-
 
 }
 .input {
@@ -68,6 +68,27 @@ legend {
 	height: 150px;
 	line-height: 100px;
 	@extend %file-upload-props;
+}
+.forgot-password{
+    text-align: right;
+    font-size: 10px;
+
+    a {
+        color: #ccc;
+        text-decoration: underline;
+        &:hover{
+             color: #333;
+        }
+    }
+}
+.sign-up{
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 400;
+
+    a {
+       color: #052963;
+    }
 }
 .inputfile {
     width: 0.1px;

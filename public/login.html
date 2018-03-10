@@ -16,7 +16,7 @@
    			<div class="grid-1">
    				<div class="panel">
 					<div class="panel-body login-box">
-						<legend>Login Page</legend>
+						<legend>Login</legend>
 						<div class="input-field">
 							<label html="text-field">User Name</label>
 							<input type="text" name="text-field" class="input" placeholder="Enter User Name" />
@@ -25,20 +25,25 @@
 							<label html="text-field">Password</label>
 							<input type="text" name="text-field" class="input" placeholder="Enter Your Password" />
 						</div>
+						<div class="input-field forgot-password">
+							<span><a href="/users/forgot-password">Forgotten Password</a></span>
+						</div>
 						<div class="input-field button-container">
 							<button class="btn-large default input-button">Login</button>
 						</div>
+						
 						<div class="input-field">
 							<button class="btn-large facebook-login input-button">Login with Facebook</button>
 						</div>
 
 						<div class="input-field">
-<<<<<<< HEAD
-							<a class="btn-large gmail-login input-button">Login with Google</a>
-=======
-							<button class="btn-large gmail-login input-button">Login with Google</button>
->>>>>>> dashboard-ui
+							<a class="btn-large gmail-login input-button" href="/auth/google">Login with Google</a>
 						</div>
+
+						<div class="input-field sign-up">
+							<span>New User? <a href="/register">Register</a></span>
+						</div>
+
 
 					</div>
 				</div>
