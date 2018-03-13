@@ -16,33 +16,43 @@
    			<div class="grid-1">
    				<div class="panel">
 					<div class="panel-body login-box">
-						<form action="/auth/login" method="post">
-							<legend>Login</legend>
+						<form action="/auth/register" method="post">
+							<legend>Register</legend>
 							<div class="input-field">
-								<label html="text-field">User Name</label>
-								<input type="text" name="username" class="input" placeholder="Enter User Name" />
+								<label html="text-field">First Name</label>
+								<input type="text" name="firstname" class="input" placeholder="Enter User Name" />
+							</div>
+							<div class="input-field">
+								<label html="text-field">Last Name</label>
+								<input type="text" name="lastname" class="input" placeholder="Enter User Name" />
+							</div>
+							<div class="input-field">
+								<label html="text-field">Email</label>
+								<input type="text" name="email" class="input" placeholder="Enter User Name" />
 							</div>
 							<div class="input-field">
 								<label html="text-field">Password</label>
-								<input type="text" name="password" class="input" placeholder="Enter Your Password" />
+								<input type="password" name="password" class="input" placeholder="Enter User Name" />
 							</div>
-							<div class="input-field forgot-password">
-								<span><a href="/users/forgot-password">Forgotten Password</a></span>
+							<div class="input-field">
+								<label html="text-field">Confirm Password</label>
+								<input type="password" name="confirmPassword" class="input" placeholder="Enter Your Password" />
 							</div>
+							
 							<div class="input-field button-container">
-								<button class="btn-large default input-button">Login</button>
+								<button class="btn-large default input-button">Register</button>
 							</div>
 							
 							<div class="input-field">
-								<button class="btn-large facebook-login input-button">Login with Facebook</button>
+								<button class="btn-large facebook-login input-button">Register with Facebook</button>
 							</div>
 
 							<div class="input-field">
-								<a class="btn-large gmail-login input-button" href="/auth/google">Login with Google</a>
+								<a class="btn-large gmail-login input-button" href="/auth/google">Register with Google</a>
 							</div>
 
 							<div class="input-field sign-up">
-								<span>New User? <a href="/register">Register</a></span>
+								<span>Already Registered? <a href="/login">Login</a></span>
 							</div>
 						</form>
 
