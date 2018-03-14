@@ -1,0 +1,29 @@
+<form action="/auth/login" method="post">
+	<legend>Login</legend>
+	<div class="input-field">
+		<label html="text-field">User Name</label>
+		<input type="text" name="username" class="input" placeholder="Enter User Name" />
+	</div>
+	<div class="input-field">
+		<label html="text-field">Password</label>
+		<input type="text" name="password" class="input" placeholder="Enter Your Password" />
+	</div>
+	<div class="input-field forgot-password">
+		<span><a href="/users/forgot-password">Forgotten Password</a></span>
+	</div>
+	<div class="input-field button-container">
+		<button class="btn-large default input-button">Login</button>
+	</div>
+	
+	<div class="input-field">
+		<button class="btn-large facebook-login input-button">Login with Facebook</button>
+	</div>
+
+	<div class="input-field">
+		<a class="btn-large gmail-login input-button" href="/auth/google">Login with Google</a>
+	</div>
+
+	<div class="input-field sign-up">
+		<span>New User? <a href="/register">Register</a></span>
+	</div>
+</form>

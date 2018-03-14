@@ -1,0 +1,49 @@
+<form action="register" method="post">
+	<legend>Register</legend>
+
+	{{#if errors}}	
+		{{#each errors}}
+			<div class="alert-container alert-error">
+				{{msg}}
+			</div>
+		{{/each}}
+	{{/if}}
+		
+
+	<div class="input-field">
+		<label html="text-field">First Name</label>
+		<input type="text" name="firstname" class="input" placeholder="Enter User Name" />
+	</div>
+	<div class="input-field">
+		<label html="text-field">Last Name</label>
+		<input type="text" name="lastname" class="input" placeholder="Enter User Name" />
+	</div>
+	<div class="input-field">
+		<label html="text-field">Email</label>
+		<input type="text" name="email" class="input" placeholder="Enter User Name" />
+	</div>
+	<div class="input-field">
+		<label html="text-field">Password</label>
+		<input type="password" name="password" class="input" placeholder="Enter User Name" />
+	</div>
+	<div class="input-field">
+		<label html="text-field">Confirm Password</label>
+		<input type="password" name="confirmPassword" class="input" placeholder="Enter Your Password" />
+	</div>
+	
+	<div class="input-field button-container">
+		<button class="btn-large default input-button">Register</button>
+	</div>
+	
+	<div class="input-field">
+		<button class="btn-large facebook-login input-button">Register with Facebook</button>
+	</div>
+
+	<div class="input-field">
+		<a class="btn-large gmail-login input-button" href="/auth/google">Register with Google</a>
+	</div>
+
+	<div class="input-field sign-up">
+		<span>Already Registered? <a href="/login">Login</a></span>
+	</div>
+</form>

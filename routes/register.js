@@ -37,69 +37,71 @@ passport.deserializeUser(function(id, done) {
     done(err, user);
   });
 });
-router.post('/register', [
-	check('email')
-	.isEmail().withMessage('must be an email')
-    .trim()
-    .normalizeEmail(),
-	check('firstname').isLength({ min: 2 }).withMessage('Firstname must not be empty'),
-	check('lastname').isLength({ min: 2 }).withMessage('Lastname must not be empty'),
-	check('password', 'requires 6 characters minimum')
-	.isLength({ min: 6 }),
-	 check("confirmPassword", "does not match password")
-        .isLength({ min: 6 })
-        .custom((value,{req, loc, path}) => {
-            if (value !== req.body.password) {
-                // trow error if passwords do not match
-                throw new Error("Passwords don't match");
-            } else {
-                return value;
-            }
-        })
+router.post('/register', 
+	[
+		check('email')
+		.isEmail().withMessage('must be an email')
+	    .trim()
+	    .normalizeEmail(),
+		check('firstname').isLength({ min: 2 }).withMessage('Firstname must not be empty'),
+		check('lastname').isLength({ min: 2 }).withMessage('Lastname must not be empty'),
+		check('password', 'requires 6 characters minimum')
+		.isLength({min: 6 }),
+		 check("confirmPassword", "does not match password")
+	        .isLength({min: 6 })
+	        .custom((value,{req, loc, path}) => {
+	            if (value !== req.body.password) {
+	                // trow error if passwords do not match
+	                throw new Error("Passwords don't match");
+	            } else {
+	                return value;
+	            }
+	        })
 
-	], (req, res)=> {
-    let firstName = req.body.firstname;
-    let lastName = req.body.lastname;
-	let email = req.body.email;
-	let password = req.body.password;
-	let confirmPassword = req.body.confirmPassword;
+	],(req, res)=> {
+	    let firstName = req.body.firstname;
+	    let lastName = req.body.lastname;
+		let email = req.body.email;
+		let password = req.body.password;
+		let confirmPassword = req.body.confirmPassword;
 
-	const errors = validationResult(req);
+		const errors = validationResult(req);
 
-	if (!errors.isEmpty()) {
+		if (!errors.isEmpty()) {
 
-		console.log(errors.mapped());
-  		res.redirect('/register');
-		
-	
-  	}
-  	else {
-  		const newUser = new User({
-			firstname: firstName,
-			lastname: lastName,
-			email:email,
-			password: password
-		});
-
-		User.createNewUser(newUser, function(err, user){
-			if ( err && err.code === 11000 ) {
-				//console.log('User already exists')
-    			//req.flash('error', 'User already exists');
-    			res.redirect('/register');
-    			return;
-  			}{
-  				console.log(user);
-  				res.redirect('/');	
-  			}
+			//console.log(errors.mapped());
+			console.log(errors.mapped());
+	  		res.render('register', {errors});
 			
-		});
+		
+	  	}
+  		else {
+	  		const newUser = new User({
+				firstname: firstName,
+				lastname: lastName,
+				email:email,
+				password: password
+			});
+
+			User.createNewUser(newUser, function(err, user){
+				if ( err && err.code === 11000 ) {
+					//console.log('User already exists')
+	    			req.flash('errors', 'User already exists');
+	    			res.render('register', {msg: errors});
+	    			return;
+	  			}{
+	  				console.log(user);
+	  				res.redirect('/');	
+	  			}
+				
+			});
 
 	// 	req.flash('success_msg', 'You are registered and can now login');
   		
+  		}
   	}
 
-	
-});
+);
 
 router.post('/register/google', passport.authenticate('google',{
 	scope:['profile']

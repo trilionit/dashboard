@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const handleBars = require('express-handlebars');
 const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
 const flash = require('connect-flash');
 const session = require('express-session');
 
@@ -48,17 +49,28 @@ app.use(passport.session());
 // Connect Flash
 app.use(flash());
 
+// // Global Vars
+// app.use(function (req, res, next) {
+//   res.locals.success_msg = req.flash('success_msg');
+//   res.locals.error_msg = req.flash('error_msg');
+//   res.locals.error = req.flash('error');
+//   res.locals.user = req.user || null;
+//   next();
+// });
+
 app.use('/auth', authRoutes);
-app.use('/auth', registerRoutes);
+app.use('/', registerRoutes);
 //use the public folder as the static directory. 
 app.use( express.static(path.join(__dirname, 'public')));
 
 //send any route to index.html where the react app is mounted
 app.get('/login', (req,res)=>{
-	res.sendFile(path.join(__dirname,'public/login.html'))
+	res.render('login');
+	//res.sendFile(path.join(__dirname,'public/login.html'))
 })
 app.get('/register', (req,res)=>{
-	res.sendFile(path.join(__dirname,'public/register.html'))
+	res.render('register');
+	//res.sendFile(path.join(__dirname,'public/register.html'))
 })
 app.get('*', (req,res)=>{
 	res.sendFile(path.join(__dirname,'public/index.html'))
