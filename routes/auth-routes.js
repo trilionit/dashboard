@@ -60,7 +60,7 @@ router.post('/auth/login', [
   	const errors = validationResult(req);
 
 	if (!errors.isEmpty()) {
-		console.log("Yes Errors")
+		//console.log("Yes Errors")
 		res.redirect('/register');
 		//return res.status(422).json({ errors: errors.mapped() });
 	}
