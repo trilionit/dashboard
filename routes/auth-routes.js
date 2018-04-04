@@ -65,7 +65,7 @@ router.post('/auth/login', [
 		//return res.status(422).json({ errors: errors.mapped() });
 	}
 	else {
-		console.log("No Errors");
+		//console.log("No Errors");
 		res.redirect('/');
 	}
 
@@ -86,7 +86,7 @@ router.get('/logout', (req, res)=> {
     if(err){
       console.log(err)
     }
-    
+
     else {
       res.redirect('/login')
     }
