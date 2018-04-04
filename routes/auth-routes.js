@@ -37,7 +37,11 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
-router.post('/login', [
+router.get('/login', (req,res)=>{
+  res.render('login');
+})
+
+router.post('/auth/login', [
 	check('username')
 		.isLength({ min: 5 }),
 
@@ -49,7 +53,7 @@ router.post('/login', [
     passport.authenticate('local', {
     	successRedirect: '/',
     	failureRedirect: '/login',
-        failureFlash: true 
+      failureFlash: true 
     }), 
     (req, res, next) => {
 
@@ -75,5 +79,18 @@ router.get('/google', passport.authenticate('google',{
 router.get('/google/redirect', passport.authenticate('google'), (req, res)=> {
 	res.send("redirected");
 })
+
+router.get('/logout', (req, res)=> {
+  req.session.destroy(function(err) {
+    //cannot access session here
+    if(err){
+      console.log(err)
+    }
+    
+    else {
+      res.redirect('/login')
+    }
+  })
+});
 
 module.exports = router;

@@ -11,6 +11,7 @@ class NavBarComponent extends Component{
 						<li><a href="/feedback"><i className="fa fa-comments fa-1x"></i> Feedback</a></li>
 						<li><a href="/gallery"><i className="fa fa-camera fa-1x"></i> Gallery</a></li>
 						<li><a href="/pages"><i className="fa fa-file-text fa-1x"></i> Pages</a></li>
+						<li><a href="/logout"><i className="fa fa-file-text fa-1x"></i> Logout</a></li>
 					</ul>
 				</div>
 

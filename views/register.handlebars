@@ -1,34 +1,112 @@
 <form action="register" method="post">
 	<legend>Register</legend>
-
-	{{#if errors}}	
-		{{#each errors}}
+	{{#showErrors}}
 			<div class="alert-container alert-error">
-				{{msg}}
+				{{# if firstname}}
+					Firstname is required
+				{{else if lastname}}
+					Lastname is required
+				{{else if email}}
+					Email is required
+				{{else if password}}
+					Password needs atleast 6 strong characters
+				{{else if confirmPassword}}
+					Confirm Password is required
+				{{else if mismatch}}
+					Passwords did not match
+				{{/if}}
+
 			</div>
-		{{/each}}
-	{{/if}}
-		
+	{{/showErrors}}
+	{{#registered}}
+		<div class="alert-container alert-error">
+			You have already registered. Go Back to the Login Page.
+		</div>
+	{{/registered}}
 
 	<div class="input-field">
 		<label html="text-field">First Name</label>
-		<input type="text" name="firstname" class="input" placeholder="Enter User Name" />
+		<input 
+			type="text" 
+			name="firstname"
+			{{#if firstname}}
+				class="input-error"
+			{{else}} 
+				class="input"
+			{{/if}}	
+			{{#if entries.errors}}
+				value="{{entries.firstname}}"
+			{{else}}
+				placeholder="Enter First Name"
+			{{/if}}
+			/>
+				
+				
+			
 	</div>
 	<div class="input-field">
 		<label html="text-field">Last Name</label>
-		<input type="text" name="lastname" class="input" placeholder="Enter User Name" />
+		<input 
+			type="text" 
+			name="lastname" 
+			{{#if lastname}}
+				class="input-error"
+			{{else}} 
+				class="input"
+			{{/if}}
+			{{#if entries.errors}}
+				value="{{entries.lastname}}"
+			{{else}}
+				placeholder="Enter Last Name"
+			{{/if}}
+			/>
+			
 	</div>
 	<div class="input-field">
 		<label html="text-field">Email</label>
-		<input type="text" name="email" class="input" placeholder="Enter User Name" />
+		<input 
+			type="email" 
+			name="email"
+			{{#if email}}
+				class="input-error"
+			{{else}} 
+				class="input"
+			{{/if}}
+			{{#if entries.errors}}
+				value="{{entries.email}}"
+			{{else}}
+				placeholder="Enter your Email"
+			{{/if}}
+			/>
+			
 	</div>
 	<div class="input-field">
 		<label html="text-field">Password</label>
-		<input type="password" name="password" class="input" placeholder="Enter User Name" />
+		<input 
+			type="password" 
+			name="password" 
+			{{#if password}}
+				class="input-error"
+			{{else}} 
+				class="input"
+			{{/if}}
+			{{#if entries.errors}}
+				value="{{entries.password}}"
+			{{else}}
+				placeholder="Enter Password" />
+			{{/if}}
 	</div>
 	<div class="input-field">
 		<label html="text-field">Confirm Password</label>
-		<input type="password" name="confirmPassword" class="input" placeholder="Enter Your Password" />
+		<input 
+			type="password" 
+			name="confirmPassword" 
+			{{#if confirmPassword}}
+				class="input-error"
+			{{else}} 
+				class="input"
+			{{/if}} 
+			placeholder="Enter Password" />
 	</div>
 	
 	<div class="input-field button-container">
@@ -39,7 +117,7 @@
 		<button class="btn-large facebook-login input-button">Register with Facebook</button>
 	</div>
 
-	<div class="input-field">
+	<div class="input-field" align="center">
 		<a class="btn-large gmail-login input-button" href="/auth/google">Register with Google</a>
 	</div>
 
