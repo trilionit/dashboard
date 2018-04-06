@@ -17,7 +17,7 @@ const userSchema = mongoose.Schema({
  });
 
 const User = module.exports = mongoose.model('User', userSchema);
-
+//new user local
 module.exports.createNewUser =(newUser, callback) => {
 	bcrypt.genSalt(10, function(err, salt) {
 	    bcrypt.hash(newUser.password, salt, function(err, hash) {
@@ -26,6 +26,12 @@ module.exports.createNewUser =(newUser, callback) => {
 	    });
 	});
 }
+
+// //new user 3rd-party
+// module.exports.createThirdPartyUser =(newUser, callback) => {
+// 	thirdPartyUser.save(callback);
+// }
+
 //find username
 module.exports.getUserByUsername = (username, callback) => {
 	let query = {email: username};

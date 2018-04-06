@@ -5,6 +5,17 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
 const User = require('../models/users');
+const googleConfig = require('../config/google-auth-config');
+
+passport.serializeUser((user, done)=> {
+  done(null, user.id);
+});
+
+passport.deserializeUser((id, done)=> {
+  User.getUserById(id, (user)=> {
+    done(null, user);
+  });
+});
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
@@ -27,21 +38,11 @@ passport.use(new LocalStrategy(
   }
 ));
 
-passport.serializeUser(function(user, done) {
-  done(null, user.id);
-});
-
-passport.deserializeUser(function(id, done) {
-  User.getUserById(id, function(err, user) {
-    done(err, user);
-  });
-});
-
 router.get('/login', (req,res)=>{
   res.render('login');
 })
 
-router.post('/auth/login', [
+router.post('/login', [
 	check('username')
 		.isLength({ min: 5 }),
 
@@ -72,12 +73,13 @@ router.post('/auth/login', [
 });
 
 router.get('/google', passport.authenticate('google',{
-	scope:['profile']
+	scope:['profile','email']
 }));
 
 
 router.get('/google/redirect', passport.authenticate('google'), (req, res)=> {
-	res.send("redirected");
+  //res.redirect('/profile');
+  res.redirect('/');
 })
 
 router.get('/logout', (req, res)=> {

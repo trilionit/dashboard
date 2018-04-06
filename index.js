@@ -5,9 +5,10 @@ const path = require('path')
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const handleBars = require('express-handlebars');
-
+const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
+
 
 const mongodb = require('mongodb');
 const mongoose = require('mongoose');
@@ -21,7 +22,8 @@ const db = mongoose.connection;
 
 const authRoutes = require('./routes/auth-routes');
 const registerRoutes = require('./routes/register');
-const passportConfig = require('./config/google-auth-config');
+const profileRoute =  require('./routes/profile-route');
+
 
 const sessionKeys = require('./config/SessionKeys');
 //app init
@@ -42,11 +44,14 @@ app.use(session({
 	saveUninitialized: false,
 	cookie: { maxAge: 60000 }
 }))
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(flash());
 
 app.use('/', authRoutes);
 app.use('/', registerRoutes);
+app.use('/', profileRoute);
 
 //use the public folder as the static directory. 
 app.use( express.static(path.join(__dirname, 'public')));
