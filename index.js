@@ -2,6 +2,8 @@
 //instatiate path and express
 const express = require('express')
 const path = require('path')
+const https = require('https')
+const fs = require('fs')
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const handleBars = require('express-handlebars');
@@ -9,7 +11,10 @@ const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
 
-
+const httpsOptions = {
+  key: fs.readFileSync('./key.pem'),
+  cert: fs.readFileSync('./cert.pem')
+}
 const mongodb = require('mongodb');
 const mongoose = require('mongoose');
 
@@ -20,7 +25,9 @@ mongoose.connect('mongodb://localhost/dashboardapp', (err)=>{
 });
 const db = mongoose.connection;
 
-const authRoutes = require('./routes/auth-routes');
+const facebookOAuthRoutes = require('./routes/facebook-oauth-routes');
+const googleOAuthRoutes = require('./routes/google-oauth-routes');
+const localRoute = require('./routes/local-route');
 const registerRoutes = require('./routes/register');
 const profileRoute =  require('./routes/profile-route');
 
@@ -49,7 +56,9 @@ app.use(passport.session());
 
 app.use(flash());
 
-app.use('/', authRoutes);
+app.use('/', facebookOAuthRoutes);
+app.use('/', googleOAuthRoutes);
+app.use('/', localRoute);
 app.use('/', registerRoutes);
 app.use('/', profileRoute);
 
@@ -62,5 +71,6 @@ app.get('*', (req,res)=>{
 		res.sendFile(path.join(__dirname,'public/index.html'))
 	}
 })
-
-app.listen(3000,()=>console.log('running on localhost:3000'))
+const server = https.createServer(httpsOptions, app).listen(3000, () => {
+	console.log('running on localhost:3000')
+});
