@@ -9,7 +9,7 @@ router.get('/facebook', passport.authenticate('facebook', {
 }));
 
 router.get('/facebook/redirect', passport.authenticate('facebook',{
-	successRedirect:'/',
+	successRedirect:'/site',
 	failureRedirect:'/register'
 }));
 

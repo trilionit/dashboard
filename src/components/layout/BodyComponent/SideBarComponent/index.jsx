@@ -15,18 +15,18 @@ class SideBarComponent extends Component{
 							<h3>Site Pages</h3>
 							<ul>
 								<li><Link to="/login"><i className="fa fa-lock"></i>Login/Sign Up</Link></li>
-								<li><Link to="/dashboard"><i className="fa fa-file-text-o"></i>Dashboard Home</Link></li>
-								<li><Link to="/pages"><i className="fa fa-columns"></i>Inner Pages</Link></li>
-								<li><Link to="/insights"><i className="fa fa-bar-chart"></i>Insights</Link></li>
+								<li><Link to="site/dashboard"><i className="fa fa-file-text-o"></i>Dashboard Home</Link></li>
+								<li><Link to="site/pages"><i className="fa fa-columns"></i>Inner Pages</Link></li>
+								<li><Link to="site/insights"><i className="fa fa-bar-chart"></i>Insights</Link></li>
 							</ul>
 						</span>
 						<span>
 							<h3>CSS Essentials</h3>
 							<ul>
-								<li><Link to="/grid"><i className="fa fa-th"></i>Grid System</Link></li>
-								<li><Link to="/forms"><i className="fa fa-address-book-o"></i>Forms</Link></li>
-								<li><Link to="/buttons"><i className="fa fa-mouse-pointer-o"></i>Buttons</Link></li>
-								<li><Link to="/panels"><i className="fa fa-file-text"></i>Panels</Link></li>
+								<li><Link to="site/grid"><i className="fa fa-th"></i>Grid System</Link></li>
+								<li><Link to="site/forms"><i className="fa fa-address-book-o"></i>Forms</Link></li>
+								<li><Link to="site/buttons"><i className="fa fa-mouse-pointer-o"></i>Buttons</Link></li>
+								<li><Link to="site/panels"><i className="fa fa-file-text"></i>Panels</Link></li>
 
 							</ul>
 						</span>

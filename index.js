@@ -3,6 +3,7 @@
 const express = require('express')
 const path = require('path')
 const https = require('https')
+const http = require('http')
 const fs = require('fs')
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
@@ -29,7 +30,8 @@ const db = mongoose.connection;
 
 const facebookRoute = require('./routes/facebook-route');
 const googleRoute = require('./routes/google-route');
-const localRoute = require('./routes/local-route');
+const localRoutes = require('./routes/local-routes');
+const loginRoute = require('./routes/login');
 const registerRoute = require('./routes/register');
 
 
@@ -37,14 +39,7 @@ const sessionKeys = require('./config/SessionKeys');
 //app init
 const app = express();
 
-const authCheck = (req, res, next)=>{
-	if(!req.user){
-		res.redirect("/login");
-	}
-	else{
-		next();
-	}
-}
+
 //set view engine
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handleBars({defaultLayout:'layout'}));
@@ -65,60 +60,16 @@ app.use(passport.session());
 
 app.use(flash());
 
-// app.use('/', facebookOAuthRoutes);
-// app.use('/', googleOAuthRoutes);
-// app.use('/', localRoute);
-// app.use('/', registerRoutes);
-
-
-// //use the public folder as the static directory. 
-// app.use( express.static(path.join(__dirname, 'public')));
-
-// //send any route to index.html where the react app is mounted
-// app.get('*',  (req,res)=>{
-// 	if(req.session.user) {
-// 		res.sendFile(path.join(__dirname,'public/index.html'))
-// 	}
-// })
-
+app.use(loginRoute);
 app.use('/', facebookRoute);
 app.use('/', googleRoute);
-app.use('/', localRoute);
+app.use('/', localRoutes);
 app.use('/', registerRoute);
-
-//use the public folder as the static directory. 
 app.use( express.static(path.join(__dirname, 'public')));
 
-app.get('/login', (req,res)=>{
-    const msg = req.flash();
-    if(msg.error) {
-      let email=false, password=false, all=false;
-      
-      if(msg.error.indexOf("em")!=-1) {
-        email=true;
-      }
-      if(msg.error.indexOf("pw")!=-1) {
-        password=true;
-      }
-      if(msg.error.length >1 ) {
-        all=true;
-      }
-      res.render('login', {
-        showErrors: true,
-        all:all,
-        email: email,
-        password: password,
-        entries: msg.entries[0]
-      })
-    }
-})
-//send any route to index.html where the react app is mounted
-app.get('*', (req,res)=>{
-	if(req.session.user) {
-		res.sendFile(path.join(__dirname,'public/index.html'))
-	}
-})
-
-const server = https.createServer(httpsOptions, app).listen(3000, () => {
-	console.log('running on localhost:3000')
+http.createServer(app).listen(3000, () => {
+	console.log('http server started on port:3000')
+});
+https.createServer(httpsOptions, app).listen(443, () => {
+	console.log('https server started  on port:443')
 });

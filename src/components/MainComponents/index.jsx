@@ -13,7 +13,7 @@ class MainComponents extends Component{
 				<div className="pages-container">
 					<Switch>			
 						<Route exact path="/" component={DashBoard} />
-						<Route path="/pages" component={ManagePages} />
+						<Route path="site/pages" component={ManagePages} />
 						<Route component={NoMatch} />
 					</Switch>
 				</div>			
