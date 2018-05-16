@@ -11,7 +11,7 @@ const authCheck = (req, res, next)=>{
 	}
 }
 
-router.get('/site', authCheck, (req, res)=>{
+router.get('/site', (req, res)=>{
     res.sendFile(path.join(__dirname,'../public/index.html'))
 })
 

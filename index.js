@@ -67,9 +67,9 @@ app.use('/', localRoutes);
 app.use('/', registerRoute);
 app.use( express.static(path.join(__dirname, 'public')));
 
-http.createServer(app).listen(3000, () => {
-	console.log('http server started on port:3000')
+http.createServer(app).listen(4000, () => {
+	console.log('http server started on port:4000')
 });
-https.createServer(httpsOptions, app).listen(443, () => {
-	console.log('https server started  on port:443')
+https.createServer(httpsOptions, app).listen(444, () => {
+	console.log('https server started  on port:444')
 });
